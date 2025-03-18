@@ -1,0 +1,637 @@
+/* General Styles */
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('fonts/EXCRATCHBold.woff2') format('woff2'),
+         url('fonts/EXCRATCHRegular.woff2') format('woff2'),
+         url('fonts/EXCRATCHThin.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    color: white;
+    position: relative;
+    /* font-family: 'MyCustomFont', sans-serif; */
+}
+
+.light-shadow {
+    position: absolute;
+    left: 20%; /* Adjust to move the glow horizontally */
+    top: 60%; /* Adjust to move it vertically */
+    transform: translate(-50%, -50%); /* Centers the glow */
+    width: 700px; /* Adjust size of glow */
+    height: 250px; 
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, rgba(255, 255, 255, 0) 80%);
+    filter: blur(80px); /* Makes it soft */
+    pointer-events: none; /* So it doesn’t interfere with clicks */
+    z-index: 1; /* Keep it above the grid and dots */
+}
+
+/* Background Grid */
+.background-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000; /* Black background */
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.2) 2px, transparent 2px), /* Horizontal grid lines */
+        linear-gradient(90deg, rgba(255, 255, 255, 0.2) 2px, transparent 2px); /* Vertical grid lines */
+    background-size: 45px 45px; /* Adjust size for bigger/smaller boxes */
+    z-index: -1;
+    opacity: 0.3; /* Keep it subtle */
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    align-items: center;
+    position: relative;
+    font-family: 'MyCustomFont', sans-serif;
+}
+
+.logo {
+    padding-left: 50px;
+    position: relative;
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding-right: 40px;
+    gap: 20px;
+    font-family: 'MyCustomFont', sans-serif;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size:x-large;
+    transition: color 0.3s ease-in-out;
+    font-family: 'MyCustomFont', sans-serif;
+}
+
+nav ul li a:hover {
+    color: #bdff23;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;  /* Align items in a vertical direction */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left:70px ;
+    padding-right: 90px;
+}
+.content{
+    padding-left: 60px;
+}
+.info{
+    /* padding-left:60px ; */
+}
+
+/* Neon Glow for Heading */
+h1 {
+    font-size: 3em;
+    text-transform: uppercase;
+    font-family: 'MyCustomFont', sans-serif;
+    margin-bottom: 10px;
+}
+
+/* Tagline Border Effect */
+.tagline {
+    border: 2px solid #bdff23;
+    padding: 15px;
+    display: inline-block;
+    border-radius: 20px;
+    font-size: larger;
+    box-shadow: 0px 0px 10px #bdff23;
+    /* font-family: 'MyCustomFont', sans-serif; */
+}
+p{
+    font-size: large;
+}
+
+/* About Cards Section */
+.carousel-container {
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Wrapper to limit visible cards */
+.carousel-wrapper {
+    width: 1190px; /* Show 3 cards at a time */
+    overflow: hidden;
+    position: relative;
+}
+
+/* Inner scrolling section */
+.carousel {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Individual cards */
+.card {
+    position: relative; 
+    flex: 0 0 280px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #bdff23;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Navigation Buttons */
+.nav-btn {
+    background: #bdff23;
+    border: none;
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background: #bdff23;
+}
+.card:hover {
+    transform: scale(1.004);
+}
+
+.card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.card h2 {
+    font-size: 22px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #ccc;
+    padding-bottom: 15px;
+}
+
+/* Buttons */
+.card .button {
+    background-color: #bdff23;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 70%;;
+    color: black;
+    padding: 10px 15px;
+    margin-top: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #bdff23;
+    
+    /* Positioning */
+    position:absolute ;
+    bottom: 10px; /* 10px above the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Centers the button */
+}
+.card .button span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    font-size: 1.1em;
+    width:80px;
+    border-radius: 30px;
+    background: #d6ff77;
+}
+.card .button:hover {
+    
+    box-shadow: 0 0 15px #bdff23;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
+
+/* why section */
+
+.why-section {
+    background: #bdff23;
+    
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 50px;
+    width: 90%;
+    height: 380px;
+    max-width: 1220px;
+    margin: 50px auto; /* Center the section */
+}
+
+.why-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 25%;
+}
+
+.why-left h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 40px;
+}
+
+.why-left img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.why-right {
+    width: 70%;
+    font-size: 16px;
+    color: black;
+}
+.why-right p{
+    padding-top: 30px;
+    padding-right: 40px;
+}
+
+.next-button {
+    display: block;
+    background:#D6FF77;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 40px;
+    width: 250px;
+    margin-bottom: 25px;
+}
+
+
+/* AI Section Layout */
+.ai-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 50px;
+    gap: 30px;
+}
+
+/* Left Side - Text Content */
+.text-content {
+    width: 80%;
+}
+
+.title {
+    font-size: 42px;
+    font-weight: bold;
+    color: #C4FF00; /* Neon Green */
+}
+
+.description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ddd;
+    max-width: 100%;
+}
+
+.description a {
+    color: #00BFFF; /* Bright Blue */
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    background-color: #C4FF00; /* Neon Green */
+    color: black;
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-top: 20px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0px 4px 10px rgba(196, 255, 0, 0.4);
+    transition: background 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: #B0E800;
+}
+
+/* Right Side - AI Image */
+.image-container {
+    width: 50%;
+    text-align: right;
+}
+
+.image-container img {
+    max-width: 100%;
+    border-radius: 10px;
+    /* box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2); */
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .ai-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-content, .image-container {
+        width: 100%;
+    }
+
+    .image-container {
+        text-align: center;
+    }
+}
+.book-button {
+    display: flex;
+    align-items: center;
+    background: #A3FF00;
+    color: black;
+    padding: 20px 20px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.5em;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0px 0px 15px #bdff23;
+    justify-content: center;
+    /* font-family: 'MyCustomFont', sans-serif; */
+}
+
+.book-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 23px #bdff23;
+}
+
+.book-button span {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    font-size: 1.2em;
+    width:80px;
+    border-radius: 30px;
+    background: #d6ff77;
+}
+
+/* Section Styling */
+.deeper-section {
+    position: relative;
+    text-align: center;
+    padding: 80px 20px;
+    /* background-color: black; Fallback color */
+    color: white; /* Ensures text is visible */
+}
+
+.deeper-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/network_communications_background_with_flowing_cyber_dots_1609.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;  /* Adjust the opacity (0.1 to 1) */
+    z-index: -1;
+}
+
+/* Title */
+.deeper-title {
+    font-size: 90px;
+    color: white;
+    font-weight: lighter;
+    margin-bottom: 40px;
+}
+
+.deeper-container {
+    position: relative; /* Ensures child elements are positioned relative to this */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Content Box */
+.deeper-content {
+    max-width: 900px;
+    padding: 30px;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    line-height: 1.6;
+    border: 3px solid #C4FF00; /* Neon Green Border */
+    border-top-left-radius: 15px; /* Rounded only top-left */
+    box-shadow: 0px 4px 15px rgba(196, 255, 0, 0.3);
+    position: relative; /* Makes sure it stays above the background */
+    z-index: 1; /* Ensures content is above the background */
+}
+
+.background-design1 {
+    position: absolute;
+    top: 3%;
+    right: 16%;
+    width: 950px;
+    height: 465px;
+    background: url("images/Union\ \(1\).png") no-repeat center;
+    background-size: cover;
+    z-index: 0; /* Places it behind the deeper-content */
+    opacity: 1;
+}
+
+/* Call-To-Action Button */
+.WhitePaper-button {
+    display: flex;
+    align-items: center;
+    width:400px;
+    background: hsl(82, 100%, 50%);
+    margin-left:270px;
+    color: black;
+    padding: 20px 20px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.5em;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0px 0px 12px #bdff23;
+    justify-content: center;
+    /* font-family: 'MyCustomFont', sans-serif; */
+}
+
+.WhitePaper-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px #bdff23;
+}
+
+.WhitePaper-button span {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    font-size: 1.2em;
+    width:80px;
+    border-radius: 30px;
+    background: #d6ff77;
+}
+
+/* Marketing Section */
+
+.team-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    color: white;
+    position: relative;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;/* Ensures video covers entire section */
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    z-index: -1;
+    opacity: 0.07;  /* Adjust transparency */
+}
+
+
+.team-content {
+    width: 50%;
+    position: relative;
+    margin-left: 50px;
+}
+
+.dots-pattern {
+    position: absolute;
+    bottom: 95%;
+    left: 0;
+    width: 240px;
+    height: 100px;
+    background-image: radial-gradient(#A3FF00 30%, transparent 20%);
+    background-size: 17px 17px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.book-button {
+    display: flex;
+    align-items: center;
+    background: #A3FF00;
+    color: black;
+    padding: 20px 20px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 2em;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0px 0px 20px #bdff23;
+    /* font-family: 'MyCustomFont', sans-serif; */
+}
+
+.book-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 30px #bdff23;
+}
+
+.book-button span {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    font-size: 1.2em;
+    width:80px;
+    border-radius: 30px;
+    background: #d6ff77;
+}
+
+.team-image {
+    width: 40%;
+}
+
+.team-image img {
+    width: 290px;
+    height: 420px;
+    margin-left:150px;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    display: block;
+    filter: grayscale(100%);
+    z-index: 1;  /* Ensures the image is on top */
+}
+
+.background-design{
+    position: absolute;
+    top: 17%;
+    right:9.5%;
+    width: 290px;
+    height: 420px;
+    background: url("images/Union.png") no-repeat center;
+    background-size: cover;
+    z-index: -1;
+    opacity: 1;  /* Makes it subtle */
+}
