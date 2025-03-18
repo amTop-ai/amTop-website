@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
 /* General Styles */
 @font-face {
   font-family: "MyCustomFont";
@@ -15,6 +17,9 @@ body {
   background-color: black;
   color: white;
   position: relative;
+  overflow-x: hidden;
+  min-height: 100vh;
+  width: 100%;
   /* font-family: 'MyCustomFont', sans-serif; */
 }
 
@@ -31,27 +36,26 @@ body {
     rgba(255, 255, 255, 0) 80%
   );
   filter: blur(80px); /* Makes it soft */
-  pointer-events: none; /* So it doesn’t interfere with clicks */
+  pointer-events: none; /* So it doesn't interfere with clicks */
   z-index: 1; /* Keep it above the grid and dots */
 }
 
 /* Background Grid */
 .background-grid {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #000; /* Black background */
+  background-color: #000;
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.2) 2px,
       transparent 2px
     ),
-    /* Horizontal grid lines */
-      linear-gradient(90deg, rgba(255, 255, 255, 0.2) 2px, transparent 2px); /* Vertical grid lines */
-  background-size: 45px 45px; /* Adjust size for bigger/smaller boxes */
+    linear-gradient(90deg, rgba(255, 255, 255, 0.2) 2px, transparent 2px);
+  background-size: 45px 45px;
   z-index: -1;
-  opacity: 0.3; /* Keep it subtle */
+  opacity: 0.3;
 }
 
 /* Header */
@@ -251,14 +255,14 @@ p {
   align-items: center;
   background: #a3ff00;
   color: black;
-  padding: 20px 20px;
-  border-radius: 30px;
+  padding: 15px 15px;
+  border-radius: 40px;
   border: none;
   cursor: pointer;
   font-weight: bold;
-  font-size: 2em;
+  font-size: 1em;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  box-shadow: 0px 0px 20px #bdff23;
+  /* box-shadow: 0px 10px 15px #bdff23; */
   /* font-family: 'MyCustomFont', sans-serif; */
 }
 
@@ -350,38 +354,6 @@ p {
   max-width: 60%;
 }
 
-.book-button2 {
-  display: flex;
-  align-items: center;
-  background: #a3ff00;
-  color: black;
-  padding: 15px 20px;
-  border-radius: 40px;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 2em;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  box-shadow: 0px 0px 20px #bdff23;
-  /* font-family: 'MyCustomFont', sans-serif; */
-}
-
-.book-button2:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 0px 30px #bdff23;
-}
-
-.book-button2 span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 10px;
-  font-size: 1.2em;
-  width: 80px;
-  border-radius: 30px;
-  background: #d6ff77;
-}
-
 .content-container {
   display: flex;
   justify-content: center;
@@ -404,4 +376,174 @@ p {
   width: 100%;
   max-width: 600px;
   border-radius: 10px;
+}
+
+/* bird-section */
+
+/* SECTION STYLING */
+.grid-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: white;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* GRID CONTAINER */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(350px, 600px));
+  gap: 40px;
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  place-items: center;
+}
+
+/* GRID ITEMS */
+.grid-item {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  width: 100%;
+  max-width: 600px;
+}
+
+.grid-item .image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Remove the img styling since we're using backgrounds */
+.grid-item img {
+  display: none;
+}
+
+/* Add specific background images for each container */
+#owl-container {
+  background-image: url("images/OWL.png");
+  background-size: 100% 100%;
+}
+
+#puma-container {
+  background-image: url("images/PUMA.png");
+  background-size: 100% 100%;
+}
+
+#spider-container {
+  background-image: url("images/SPIDER.png");
+  background-size: 100% 100%;
+}
+
+#robot-container {
+  background-image: url("images/ROBOT.png");
+  background-size: 100% 100%;
+}
+
+.grid-item .text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.grid-item h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 2.2rem;
+  color: white;
+  /* margin: px 0 0 15px; */
+  line-height: 1.2;
+  text-align: center;
+  max-width: 65%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.text-content-bottom {
+  align-self: flex-end;
+  max-width: 58%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 25px;
+  margin-right: 20px;
+  transform: translateY(-21px);
+}
+
+.grid-item p {
+  font-size: 0.96rem;
+  color: #ffffff;
+  opacity: 0.9;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* -webkit-box-orient: vertical; */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.book-button2 {
+  display: flex;
+  align-items: center;
+  background: #a3ff00;
+  color: black;
+  padding: 15px 30px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  /* box-shadow: 0px 10px 15px #bdff23; */
+  /* font-family: 'MyCustomFont', sans-serif; */
+}
+
+.book-button2:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 30px #bdff23;
+}
+
+.book-button2 span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  padding-bottom: 5px;
+  font-size: 2em; 
+  width: 60px;
+  border-radius: 30px;
+  background: #d6ff77;
+}
+
+/* Custom scrollbar for the text */
+.grid-item p::-webkit-scrollbar {
+  width: 5px;
+}
+
+.grid-item p::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+.grid-item p::-webkit-scrollbar-thumb {
+  background: #bdff23;
+  border-radius: 5px;
 }
