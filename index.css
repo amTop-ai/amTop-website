@@ -1,355 +1,580 @@
 /* General Styles */
 @font-face {
-    font-family: 'MyCustomFont';
-    src: url('fonts/EXCRATCHBold.woff2') format('woff2'),
-         url('fonts/EXCRATCHRegular.woff2') format('woff2'),
-         url('fonts/EXCRATCHThin.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "MyCustomFont";
+  src: url("fonts/EXCRATCHBold.woff2") format("woff2"),
+    url("fonts/EXCRATCHRegular.woff2") format("woff2"),
+    url("fonts/EXCRATCHThin.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: black;
-    color: white;
-    position: relative;
-    /* font-family: 'MyCustomFont', sans-serif; */
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: black;
+  color: white;
+  position: relative;
+  /* font-family: 'MyCustomFont', sans-serif; */
 }
 
 .light-shadow {
-    position: absolute;
-    left: 20%; /* Adjust to move the glow horizontally */
-    top: 60%; /* Adjust to move it vertically */
-    transform: translate(-50%, -50%); /* Centers the glow */
-    width: 700px; /* Adjust size of glow */
-    height: 250px; 
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, rgba(255, 255, 255, 0) 80%);
-    filter: blur(80px); /* Makes it soft */
-    pointer-events: none; /* So it doesn’t interfere with clicks */
-    z-index: 1; /* Keep it above the grid and dots */
+  position: absolute;
+  left: 20%; /* Adjust to move the glow horizontally */
+  top: 60%; /* Adjust to move it vertically */
+  transform: translate(-50%, -50%); /* Centers the glow */
+  width: 700px; /* Adjust size of glow */
+  height: 250px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.2) 10%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  filter: blur(80px); /* Makes it soft */
+  pointer-events: none; /* So it doesn't interfere with clicks */
+  z-index: 1; /* Keep it above the grid and dots */
 }
 
 /* Background Grid */
 .background-grid {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000; /* Black background */
-    background-image: 
-        linear-gradient(rgba(255, 255, 255, 0.2) 2px, transparent 2px), /* Horizontal grid lines */
-        linear-gradient(90deg, rgba(255, 255, 255, 0.2) 2px, transparent 2px); /* Vertical grid lines */
-    background-size: 45px 45px; /* Adjust size for bigger/smaller boxes */
-    z-index: -1;
-    opacity: 0.3; /* Keep it subtle */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000; /* Black background */
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.2) 2px,
+      transparent 2px
+    ),
+    /* Horizontal grid lines */
+      linear-gradient(90deg, rgba(255, 255, 255, 0.2) 2px, transparent 2px); /* Vertical grid lines */
+  background-size: 45px 45px; /* Adjust size for bigger/smaller boxes */
+  z-index: -1;
+  opacity: 0.3; /* Keep it subtle */
 }
 
 /* Header */
 header {
-    display: flex;
-    justify-content: space-between;
-    padding: 50px;
-    align-items: center;
-    position: relative;
-    font-family: 'MyCustomFont', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  align-items: center;
+  position: relative;
+  font-family: "MyCustomFont", sans-serif;
 }
 
 .logo {
-    padding-left: 50px;
-    position: relative;
-    max-width: 100%;
-    border-radius: 20px;
+  padding-left: 50px;
+  position: relative;
+  max-width: 100%;
+  border-radius: 20px;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    padding-right: 40px;
-    gap: 20px;
-    font-family: 'MyCustomFont', sans-serif;
+  list-style: none;
+  display: flex;
+  padding-right: 40px;
+  gap: 20px;
+  font-family: "MyCustomFont", sans-serif;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size:x-large;
-    transition: color 0.3s ease-in-out;
-    font-family: 'MyCustomFont', sans-serif;
+  text-decoration: none;
+  color: white;
+  font-size: x-large;
+  transition: color 0.3s ease-in-out;
+  font-family: "MyCustomFont", sans-serif;
 }
 
 nav ul li a:hover {
-    color: #bdff23;
+  color: #bdff23;
 }
 
 /* Hero Section */
 .hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    position: relative;
-    /* font-family: 'MyCustomFont', sans-serif; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+  /* font-family: 'MyCustomFont', sans-serif; */
 }
 
-.content{
-    padding-left: 60px;
+.content {
+  padding-left: 60px;
 }
 
 /* Neon Glow for Heading */
 h1 {
-    font-size: 3em;
-    text-transform: uppercase;
-    font-family: 'MyCustomFont', sans-serif;
-    margin-bottom: 10px;
+  font-size: 3em;
+  text-transform: uppercase;
+  font-family: "MyCustomFont", sans-serif;
+  margin-bottom: 10px;
 }
 
 /* Tagline Border Effect */
 .tagline {
-    border: 2px solid #bdff23;
-    padding: 15px;
-    display: inline-block;
-    border-radius: 20px;
-    font-size: larger;
-    box-shadow: 0px 0px 10px #bdff23;
-    /* font-family: 'MyCustomFont', sans-serif; */
+  border: 2px solid #bdff23;
+  padding: 15px;
+  display: inline-block;
+  border-radius: 20px;
+  font-size: larger;
+  box-shadow: 0px 0px 10px #bdff23;
+  /* font-family: 'MyCustomFont', sans-serif; */
 }
-p{
-    font-size: large;
+p {
+  font-size: large;
 }
 
 /* Input Container with Neon Effect */
 .input-container {
-    display: flex;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 10px;
-    border-radius: 10px;
-    margin-top: 20px;
-    width: 650px;
-    box-shadow: 0px 0px 15px rgb(187, 255, 0);
-    font-family: 'MyCustomFont', sans-serif;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+  width: 650px;
+  box-shadow: 0px 0px 15px rgb(187, 255, 0);
+  font-family: "MyCustomFont", sans-serif;
 }
 
 .input-container input {
-    border: none;
-    outline: none;
-    background: transparent;
-    color: white;
-    flex-grow: 1;
-    padding: 10px;
-    font-family: 'MyCustomFont', sans-serif;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+  flex-grow: 1;
+  padding: 10px;
+  font-family: "MyCustomFont", sans-serif;
 }
 
 /* Button with Glow Effect */
 .btn {
-    margin-top: 20px;
-    height:3em;
-    background: #bdff23;
-    color: black;
-    padding: 15px 30px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 2em;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    box-shadow: 0px 0px 20px #bdff23;
-    font-family: 'MyCustomFont', sans-serif;
+  margin-top: 20px;
+  height: 3em;
+  background: #bdff23;
+  color: black;
+  padding: 15px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 2em;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0px 0px 20px #bdff23;
+  font-family: "MyCustomFont", sans-serif;
 }
 
 .btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 30px #bdff23;
+  transform: scale(1.05);
+  box-shadow: 0px 0px 30px #bdff23;
 }
 
 .dotted-pattern {
-    position: absolute;
-    right: 32%; /* Adjust to align with the image */
-    top: 70%;
-    transform: translateY(-60%);
-    display: grid;
-    grid-template-columns: repeat(2, 30px); /* Adjust number & size of dots */
-    grid-gap: 10px; /* Space between dots */
+  position: absolute;
+  right: 32%; /* Adjust to align with the image */
+  top: 70%;
+  transform: translateY(-60%);
+  display: grid;
+  grid-template-columns: repeat(2, 30px); /* Adjust number & size of dots */
+  grid-gap: 10px; /* Space between dots */
 }
 
 .dotted-pattern div {
-    width: 35px;
-    height: 35px;
-    background-color: #b5ff00; /* Neon Green Color */
-    border-radius: 50%; /* Makes circles */
+  width: 35px;
+  height: 35px;
+  background-color: #b5ff00; /* Neon Green Color */
+  border-radius: 50%; /* Makes circles */
 }
 
 /* Image Section */
 .image-container {
-    position: relative;
+  position: relative;
 }
 
 .image-container img {
-    max-width: 85%;
-    border-radius: 20px;
-    
+  max-width: 85%;
+  border-radius: 20px;
 }
 
 /* Second page */
 
 .team-section {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px;
-    color: white;
-    position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  color: white;
+  position: relative;
 }
 
 .background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;/* Ensures video covers entire section */
-    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
-    z-index: -1;
-    opacity: 0.2;  /* Adjust transparency */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures video covers entire section */
+  background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+  z-index: -1;
+  opacity: 0.2; /* Adjust transparency */
 }
 
-
 .team-content {
-    width: 50%;
-    position: relative;
-    margin-left: 50px;
+  width: 50%;
+  position: relative;
+  margin-left: 50px;
 }
 
 .dots-pattern {
-    position: absolute;
-    bottom: 95%;
-    left: 0;
-    width: 240px;
-    height: 100px;
-    background-image: radial-gradient(#A3FF00 30%, transparent 20%);
-    background-size: 17px 17px;
+  position: absolute;
+  bottom: 95%;
+  left: 0;
+  width: 240px;
+  height: 100px;
+  background-image: radial-gradient(#a3ff00 30%, transparent 20%);
+  background-size: 17px 17px;
 }
 
 h2 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
 }
 
 p {
-    font-size: 1rem;
-    line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .book-button {
-    display: flex;
-    align-items: center;
-    background: #A3FF00;
-    color: black;
-    padding: 20px 20px;
-    border-radius: 30px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 2em;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    box-shadow: 0px 0px 20px #bdff23;
-    /* font-family: 'MyCustomFont', sans-serif; */
+  display: flex;
+  align-items: center;
+  background: #a3ff00;
+  color: black;
+  padding: 20px 20px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 2em;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0px 0px 20px #bdff23;
+  /* font-family: 'MyCustomFont', sans-serif; */
 }
 
 .book-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 30px #bdff23;
+  transform: scale(1.05);
+  box-shadow: 0px 0px 30px #bdff23;
 }
 
 .book-button span {
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 10px;
-    font-size: 1.2em;
-    width:80px;
-    border-radius: 30px;
-    background: #d6ff77;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  font-size: 1.2em;
+  width: 80px;
+  border-radius: 30px;
+  background: #d6ff77;
 }
 
 .team-image {
-    width: 40%;
+  width: 40%;
 }
 
 .team-image img {
-    width: 290px;
-    height: 420px;
-    margin-left:150px;
-    margin-bottom: 50px;
-    border-radius: 5px;
-    display: block;
-    filter: grayscale(100%);
-    z-index: 1;  /* Ensures the image is on top */
+  width: 290px;
+  height: 420px;
+  margin-left: 150px;
+  margin-bottom: 50px;
+  border-radius: 5px;
+  display: block;
+  filter: grayscale(100%);
+  z-index: 1; /* Ensures the image is on top */
 }
 
-.background-design{
-    position: absolute;
-    top: 17%;
-    right:9.5%;
-    width: 290px;
-    height: 420px;
-    background: url("images/Union.png") no-repeat center;
-    background-size: cover;
-    z-index: -1;
-    opacity: 1;  /* Makes it subtle */
+.background-design {
+  position: absolute;
+  top: 17%;
+  right: 9.5%;
+  width: 290px;
+  height: 420px;
+  background: url("images/Union.png") no-repeat center;
+  background-size: cover;
+  z-index: -1;
+  opacity: 1; /* Makes it subtle */
 }
 
 /* Marketing Section  */
 
 .marketing-section {
-    padding: 50px;
-    display: flex;
-    flex-wrap: wrap;
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .first-part {
-    display: flex;
-    
-    justify-content: space-evenly;
+  display: flex;
+
+  justify-content: space-evenly;
 }
 
-.text{
-    padding-left: 70px;
-    padding-right:70px;
+.text {
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
 .why-section {
-    background-color: #A3FF00; /* Light Neon Green */
-    padding: 15px;
-    margin-right: 40px;
-    color:black;
-    border-radius: 15px;
-    width: 80%;
-    font-family: Arial, sans-serif;
-    box-shadow: 0px 0px 30px #bdff23;
+  background-color: #a3ff00; /* Light Neon Green */
+  padding: 15px;
+  margin-right: 40px;
+  color: black;
+  border-radius: 15px;
+  width: 80%;
+  font-family: Arial, sans-serif;
+  box-shadow: 0px 0px 30px #bdff23;
 }
 
 .why-section h2 {
-    font-size: 20px;
-    font-weight: bold;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .why-section p {
-    font-size: 14px;
-    margin-top: 0px;
+  font-size: 14px;
+  margin-top: 0px;
 }
 
 .arrow-button {
-    background-color: rgba(255, 255, 255, 0.5); /* Light white transparent */
-    border: none;
-    border-radius:10%;
-    padding: 10px 15px;
-    font-size: 18px;
-    width: 100%;
-    cursor: pointer;
-    
+  background-color: rgba(255, 255, 255, 0.5); /* Light white transparent */
+  border: none;
+  border-radius: 10%;
+  padding: 10px 15px;
+  font-size: 18px;
+  width: 100%;
+  cursor: pointer;
 }
 
+/* bird-section */
+
+/* SECTION STYLING */
+.grid-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: white;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* GRID CONTAINER */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(350px, 600px));
+  gap: 40px;
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  place-items: center;
+}
+
+/* GRID ITEMS */
+.grid-item {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  width: 100%;
+  max-width: 600px;
+}
+
+.grid-item .image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Remove the img styling since we're using backgrounds */
+.grid-item img {
+  display: none;
+}
+
+/* Add specific background images for each container */
+#owl-container {
+  background-image: url("images/OWL.png");
+  background-size: 100% 100%;
+}
+
+#puma-container {
+  background-image: url("images/PUMA.png");
+  background-size: 100% 100%;
+}
+
+#spider-container {
+  background-image: url("images/SPIDER.png");
+  background-size: 100% 100%;
+}
+
+#robot-container {
+  background-image: url("images/ROBOT.png");
+  background-size: 100% 100%;
+}
+
+.grid-item .text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.grid-item h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 2.2rem;
+  color: white;
+  line-height: 1.2;
+  text-align: center;
+  max-width: 65%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.text-content-bottom {
+  align-self: flex-end;
+  max-width: 58%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 25px;
+  margin-right: 20px;
+  transform: translateY(-21px);
+}
+
+.grid-item p {
+  font-size: 0.96rem;
+  color: #ffffff;
+  opacity: 0.9;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.book-button-grid {
+    display: flex;
+    align-items: center;
+    background: #a3ff00;
+    color: black;
+    padding: 15px 30px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    /* box-shadow: 0px 10px 15px #bdff23; */
+    /* font-family: 'MyCustomFont', sans-serif; */
+  }
+  
+  .book-button-grid:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 30px #bdff23;
+  }
+  
+  .book-button-grid span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    padding-bottom: 5px;
+    font-size: 2em;
+    width: 60px;
+    border-radius: 30px;
+    background: #d6ff77;
+  }
+
+/* Analysis Section */
+.analysis-section {
+  position: relative;
+  align-items: center;
+  padding: 70px;
+  color: white;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+/* Background Video Styling */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.content-2 {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  color: white;
+  position: relative;
+}
+
+.content-2-header h2 {
+  font-size: 4.5rem;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-align: left;
+}
+
+.content-2 p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.written_content {
+  max-width: 60%;
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  z-index: 2;
+  padding: 20px;
+}
+
+.dots-pattern-vert {
+  position: absolute;
+  left: 5%;
+  width: 150px;
+  height: 300px;
+  background-image: radial-gradient(#a3ff00 30%, transparent 20%);
+  background-size: 15px 15px;
+}
+
+.content-container img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+}
