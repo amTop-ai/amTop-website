@@ -167,6 +167,8 @@ p {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   box-shadow: 0px 0px 20px #bdff23;
   font-family: "MyCustomFont", sans-serif;
+  outline: none;
+  border: none;
 }
 
 .btn:hover {
