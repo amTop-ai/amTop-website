@@ -1,0 +1,324 @@
+/* General Styles */
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('fonts/EXCRATCHBold.woff2') format('woff2'),
+         url('fonts/EXCRATCHRegular.woff2') format('woff2'),
+         url('fonts/EXCRATCHThin.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    color: white;
+    position: relative;
+    /* font-family: 'MyCustomFont', sans-serif; */
+}
+
+.light-shadow {
+    position: absolute;
+    left: 20%; /* Adjust to move the glow horizontally */
+    top: 60%; /* Adjust to move it vertically */
+    transform: translate(-50%, -50%); /* Centers the glow */
+    width: 700px; /* Adjust size of glow */
+    height: 250px; 
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, rgba(255, 255, 255, 0) 80%);
+    filter: blur(80px); /* Makes it soft */
+    pointer-events: none; /* So it doesn’t interfere with clicks */
+    z-index: 1; /* Keep it above the grid and dots */
+}
+
+/* Background Grid */
+.background-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000; /* Black background */
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.2) 2px, transparent 2px), /* Horizontal grid lines */
+        linear-gradient(90deg, rgba(255, 255, 255, 0.2) 2px, transparent 2px); /* Vertical grid lines */
+    background-size: 45px 45px; /* Adjust size for bigger/smaller boxes */
+    z-index: -1;
+    opacity: 0.3; /* Keep it subtle */
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    align-items: center;
+    position: relative;
+    font-family: 'MyCustomFont', sans-serif;
+}
+
+.logo {
+    padding-left: 50px;
+    position: relative;
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding-right: 40px;
+    gap: 20px;
+    font-family: 'MyCustomFont', sans-serif;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size:x-large;
+    transition: color 0.3s ease-in-out;
+    font-family: 'MyCustomFont', sans-serif;
+}
+
+nav ul li a:hover {
+    color: #bdff23;
+}
+
+/* Hero Section  */
+
+.Hero-section {
+    display: flex;
+    color: white;
+    padding-left: 20px ;
+    min-height:78vh;
+    padding-top:0px;
+    margin-bottom: 0; 
+}
+
+.content {
+    width: 50%;
+    text-align: left;
+}
+
+/* Highlight Tab */
+.highlight-tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 15px;
+    border: 2px solid #9EFF39;
+    box-shadow: 0px 0px 10px #bdff23;
+    width:175px;
+    border-radius: 20px;
+    background-color: #000;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+/* Heading */
+.content h1 {
+    font-size: 45px;
+    font-stretch:extra-expanded;
+    font-weight:lighter;
+    width:800px;
+    margin-bottom: 40px;
+    font-family: 'MyCustomFont', sans-serif;
+}
+
+/* Description */
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+/* Button */
+.book-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #A3FF00;
+    color: black;
+    padding: 20px 20px;
+    border-radius: 50px;
+    width: 400px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 2em;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0px 0px 20px #bdff23;
+    /* font-family: 'MyCustomFont', sans-serif; */
+}
+
+.book-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 30px #bdff23;
+}
+
+.book-button span {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    font-size: 1.2em;
+    width:80px;
+    border-radius: 30px;
+    background: #d6ff77;
+}
+
+
+/* AI Analytics Section */
+.ai-analytics {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height:100vh;
+    background-color: black;
+    color: white;
+    margin-top: 0; 
+}
+
+/* Spider Web Background */
+.web-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start; /* Align to the left */
+    align-items: center;
+    z-index: 1; /* Behind the dotted pattern */
+}
+
+.web-background img {
+    width: 1520px; /* Adjust size as needed */
+    height:100vh;
+    opacity: 0.2; /* Set opacity for transparency */
+}
+
+/* Dotted Pattern (Top Left) */
+.dotted-pattern {
+    position: absolute;
+    top: 0;
+    left: 75px;
+}
+
+.dotted-pattern img {
+    width: 320px;
+    z-index: 2;
+}
+
+/* Content */
+.content {
+    max-width: 60%;
+    padding-left: 75px;
+    z-index: 3; /* Above everything */
+}
+
+.content h2 {
+    color: #aaff00; /* Neon green */
+    font-size: 3.5rem;
+    /* padding-top:60px; */
+}
+
+.content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Spider Image (Right Side) */
+.spider-image {
+    position: relative;
+    max-width: 100%;
+    z-index: 3;
+}
+
+.spider-image img {
+    width: 100%;
+    max-height: 700px;
+}
+
+/* Social Media Section */
+.social-media-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 80px;
+    height:130vh;
+    background-color: black;
+    color: white;
+}
+
+/* Left Panel */
+.left-panel {
+    width: 35%;
+    position: relative;
+}
+
+/* Dotted Pattern */
+.dotted-pattern2 {
+    position: absolute;
+}
+
+.dotted-pattern2 img {
+    width: 320px;
+}
+
+/* Ads List */
+.ads-list {
+    padding-top: 150px;
+}
+
+.ad-card {
+    background: transparent;
+    padding: 15px;
+    border-bottom: 3px solid rgb(255, 255, 255,0.8);
+    cursor: pointer;
+    display: wrap;
+    width:280px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ad-card h3 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.ad-card p {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* Highlight the first card */
+.ad-card.active {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 0px;
+}
+.arrow img {
+    width: 20px;  /* Adjust size as needed */
+    height: auto;
+    margin-left: 260px;  /* Adds spacing between text and image */
+}
+
+/* Right Panel */
+.right-panel {
+    width: 70%;
+    padding-right:150px;
+}
+
+.right-panel h2 {
+    color: #aaff00;
+    font-size: 4rem;
+}
+
+.right-panel p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
