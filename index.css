@@ -20,8 +20,8 @@ body {
 
 .light-shadow {
   position: absolute;
-  left: 20%; /* Adjust to move the glow horizontally */
-  top: 60%; /* Adjust to move it vertically */
+  left: 270px; /* Adjust to move the glow horizontally */
+  top: 400px; /* Adjust to move it vertically */
   transform: translate(-50%, -50%); /* Centers the glow */
   width: 700px; /* Adjust size of glow */
   height: 250px;
