@@ -159,7 +159,6 @@ p {
 .card {
   position: relative;
   flex: 0 0 280px; /* Fixed width for each card */
-  height: 500px;
   background: rgba(0, 0, 0, 0.8);
   border: 2px solid #bdff23;
   padding: 20px;
@@ -219,7 +218,7 @@ p {
 
   /* Positioning */
   position: absolute;
-  /* bottom: 10px; //10px above the bottom */
+  bottom: 10px; /* 10px above the bottom */
   left: 50%;
   transform: translateX(-50%); /* Centers the button */
 }

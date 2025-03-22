@@ -1,5 +1,3 @@
-#hekjfadsi
-
 /* General Styles */
 @font-face {
   font-family: "MyCustomFont";
@@ -97,7 +95,6 @@ nav ul li a:hover {
   align-items: center;
   padding: 10px;
   position: relative;
-  height: 80vh;
   /* font-family: 'MyCustomFont', sans-serif; */
 }
 
@@ -115,11 +112,10 @@ h1 {
 
 /* Tagline Border Effect */
 .tagline {
-  background-color: #000;
   border: 2px solid #bdff23;
-  padding: 18px;
+  padding: 15px;
   display: inline-block;
-  border-radius: 40px;
+  border-radius: 20px;
   font-size: larger;
   box-shadow: 0px 0px 10px #bdff23;
   /* font-family: 'MyCustomFont', sans-serif; */
@@ -128,42 +124,47 @@ p {
   font-size: large;
 }
 
-/* Button with Glow Effect */
-.btn{
-  margin-top: 15px;
+/* Input Container with Neon Effect */
+.input-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background: #a3ff00;
-  color: black;
-  padding: 15px 45px;
-  width: 450px;
-  border-radius: 60px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+  width: 650px;
+  box-shadow: 0px 0px 15px rgb(187, 255, 0);
+  font-family: "MyCustomFont", sans-serif;
+}
+
+.input-container input {
   border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+  flex-grow: 1;
+  padding: 10px;
+  font-family: "MyCustomFont", sans-serif;
+}
+
+/* Button with Glow Effect */
+.btn {
+  margin-top: 20px;
+  height: 3em;
+  background: #bdff23;
+  color: black;
+  padding: 15px 30px;
+  border-radius: 10px;
   cursor: pointer;
-  font-weight: 600;
   font-size: 2em;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  /* box-shadow: 0px 10px 15px #bdff23; */
-  /* font-family: 'MyCustomFont', sans-serif; */
+  box-shadow: 0px 0px 20px #bdff23;
+  font-family: "MyCustomFont", sans-serif;
 }
 
 .btn:hover {
   transform: scale(1.05);
   box-shadow: 0px 0px 30px #bdff23;
-}
-
-.btn span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 10px;
-  padding-bottom: 10px;
-  font-size: 1.8em;
-  font-weight: bold;
-  width: 110px;
-  border-radius: 30px;
-  background: #d6ff77;
 }
 
 .dotted-pattern {
@@ -341,7 +342,6 @@ p {
 .text {
   padding-left: 70px;
   padding-right: 70px;
-  text-align: justify;
 }
 
 .why-section {
@@ -495,7 +495,7 @@ p {
   overflow-wrap: break-word;
 }
 
-.book-button-grid{
+.book-button-grid {
   display: flex;
   align-items: center;
   background: #a3ff00;
@@ -541,7 +541,7 @@ p {
 /* Background Video Styling */
 .background-video {
   position: absolute;
-  background: rgba(0, 0, 0, 0.8); /* Optional dark overlay */
+  background: rgba(0, 0, 0, 0.1); /* Optional dark overlay */
   top: 0;
   left: 0;
   width: 100%;
