@@ -86,28 +86,28 @@ const teamMembers = [
 ];
 
 let currentIndex = 0;
-const teamContent = document.querySelector(".team-content p");
-const teamImage = document.querySelector(".team-image img");
+const visibleCards = 3; // Number of cards visible
+const cardWidth = 300; // Adjust width (includes padding/margin)
 
-function updateTeamSection() {
-  teamContent.classList.remove("active");
-  teamImage.classList.remove("active");
-
-  setTimeout(() => {
-    teamContent.innerHTML = teamMembers[currentIndex].description;
-    teamImage.src = teamMembers[currentIndex].image;
-
-    teamContent.classList.add("active");
-    teamImage.classList.add("active");
-
-    currentIndex = (currentIndex + 1) % teamMembers.length; // Loop back to the first
-  }, 500); // Small delay for smooth transition
+function updateCarousel() {
+  carousel.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
 }
 
-// Run animation every 5 seconds
-setInterval(updateTeamSection, 5000);
-
-// Initial setup
-document.addEventListener("DOMContentLoaded", () => {
-  updateTeamSection(); // Start with first team member
+// Move next
+nextBtn.addEventListener("click", () => {
+  if (currentIndex < cards.length - visibleCards) {
+    currentIndex++;
+    updateCarousel();
+  }
 });
+
+// Move previous
+prevBtn.addEventListener("click", () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+    updateCarousel();
+  }
+});
+
+// Set initial position
+updateCarousel();
