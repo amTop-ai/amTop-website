@@ -1,3 +1,5 @@
+#hekjfadsi
+
 /* General Styles */
 @font-face {
   font-family: "MyCustomFont";
@@ -539,7 +541,7 @@ p {
 /* Background Video Styling */
 .background-video {
   position: absolute;
-  background: rgba(0, 0, 0, 0.1); /* Optional dark overlay */
+  background: rgba(0, 0, 0, 0.8); /* Optional dark overlay */
   top: 0;
   left: 0;
   width: 100%;
