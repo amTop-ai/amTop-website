@@ -52,40 +52,129 @@ body {
 }
 
 /* Header */
-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 50px;
-  align-items: center;
-  position: relative;
-  font-family: "MyCustomFont", sans-serif;
+.navbar {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    /* background-color: black; */
+    padding: 20px;
+    padding-bottom: 0px;
+    color: white;
+    font-family: 'MyCustomFont', sans-serif;
+}
+.nav-buttons{
+    display: flex;
+    align-items: center;
+    margin-left: 140px;
 }
 
-.logo {
-  padding-left: 50px;
-  position: relative;
-  max-width: 100%;
-  border-radius: 20px;
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    list-style: none;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  padding-right: 40px;
-  gap: 20px;
-  font-family: "MyCustomFont", sans-serif;
+.nav-item {
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 23px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: white;
-  font-size: x-large;
-  transition: color 0.3s ease-in-out;
-  font-family: "MyCustomFont", sans-serif;
+.nav-item:hover {
+    color: #A3FF00; /* Neon Green */
 }
 
-nav ul li a:hover {
-  color: #bdff23;
+/* Cards Section */
+.cards-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.cards {
+    display: none; /* Hide all cards initially */
+    position: absolute;
+    z-index:10;
+    top: 25px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.card {
+    background: #111;
+    color: white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    /* text-align: center; */
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+.card a{
+    text-decoration: none;
+}
+.card h2{
+    font-size: 2.2rem;
+}
+/* Button */
+.book-button-nav {
+    background: #A3FF00;
+    color: black;
+    padding: 15px 20px;
+    margin-left: 170px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: medium;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.book-button-nav:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px #bdff23;
+}
+
+.book-button-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #A3FF00;
+    color: black;
+    padding: 10px 10px;
+    margin-bottom: 15px;
+    border-radius: 50px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    /* font-family: 'MyCustomFont', sans-serif; */
+}
+
+.book-button-card:hover {
+    transform: scale(1.05);
+    text-decoration: none;
+    box-shadow: 0px 0px 10px #bdff23;
+}
+
+.book-button-card span {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    font-size: 1.2em;
+    width:70px;
+    height:40px;
+    border-radius: 50px;
+    background: #d6ff77;
 }
 
 /* Hero Section */
@@ -93,6 +182,7 @@ nav ul li a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height:100vh;
   padding: 10px;
   position: relative;
   /* font-family: 'MyCustomFont', sans-serif; */
@@ -100,6 +190,7 @@ nav ul li a:hover {
 
 .content {
   padding-left: 60px;
+  padding-top:0px;
 }
 
 /* Neon Glow for Heading */
@@ -122,29 +213,6 @@ h1 {
 }
 p {
   font-size: large;
-}
-
-/* Input Container with Neon Effect */
-.input-container {
-  display: flex;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 10px;
-  border-radius: 10px;
-  margin-top: 20px;
-  width: 650px;
-  box-shadow: 0px 0px 15px rgb(187, 255, 0);
-  font-family: "MyCustomFont", sans-serif;
-}
-
-.input-container input {
-  border: none;
-  outline: none;
-  background: transparent;
-  color: white;
-  flex-grow: 1;
-  padding: 10px;
-  font-family: "MyCustomFont", sans-serif;
 }
 
 /* Button with Glow Effect */

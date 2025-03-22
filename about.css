@@ -55,41 +55,131 @@ body {
 }
 
 /* Header */
-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 50px;
-  align-items: center;
-  position: relative;
-  font-family: "MyCustomFont", sans-serif;
+.navbar {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    /* background-color: black; */
+    padding: 20px;
+    padding-bottom: 0px;
+    color: white;
+    font-family: 'MyCustomFont', sans-serif;
+}
+.nav-buttons{
+    display: flex;
+    align-items: center;
+    margin-left: 140px;
 }
 
-.logo {
-  padding-left: 50px;
-  position: relative;
-  max-width: 100%;
-  border-radius: 20px;
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    list-style: none;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  padding-right: 40px;
-  gap: 20px;
-  font-family: "MyCustomFont", sans-serif;
+.nav-item {
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 23px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: white;
-  font-size: x-large;
-  transition: color 0.3s ease-in-out;
-  font-family: "MyCustomFont", sans-serif;
+.nav-item:hover {
+    color: #A3FF00; /* Neon Green */
 }
 
-nav ul li a:hover {
-  color: #bdff23;
+/* Cards Section */
+.cards-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
+
+.navcards {
+    display: none; /* Hide all cards initially */
+    position: absolute;
+    z-index:10;
+    top: 25px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.card {
+    background: #111;
+    color: white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    /* text-align: center; */
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+.card a{
+    text-decoration: none;
+}
+.card h2{
+    font-size: 2.2rem;
+}
+/* Button */
+.book-button-nav {
+    background: #A3FF00;
+    color: black;
+    padding: 15px 20px;
+    margin-left: 170px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: medium;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.book-button-nav:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px #bdff23;
+}
+
+.book-button-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #A3FF00;
+    color: black;
+    padding: 10px 10px;
+    margin-bottom: 15px;
+    border-radius: 50px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    /* font-family: 'MyCustomFont', sans-serif; */
+}
+
+.book-button-card:hover {
+    transform: scale(1.05);
+    text-decoration: none;
+    box-shadow: 0px 0px 10px #bdff23;
+}
+
+.book-button-card span {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    font-size: 1.2em;
+    width:70px;
+    height:40px;
+    border-radius: 50px;
+    background: #d6ff77;
+}
+
 
 /* Hero Section */
 .hero {
@@ -156,7 +246,7 @@ p {
 }
 
 /* Individual cards */
-.card {
+.moving-card {
   position: relative;
   flex: 0 0 280px; /* Fixed width for each card */
   background: rgba(0, 0, 0, 0.8);
@@ -181,28 +271,28 @@ p {
 .nav-btn:hover {
   background: #bdff23;
 }
-.card:hover {
+.moving-card:hover {
   transform: scale(1.004);
 }
 
-.card img {
+.moving-card img {
   width: 60px;
   height: 60px;
   margin-bottom: 10px;
 }
 
-.card h2 {
+.moving-card h2 {
   font-size: 22px;
 }
 
-.card p {
+.moving-card p {
   font-size: 16px;
   color: #ccc;
   padding-bottom: 15px;
 }
 
 /* Buttons */
-.card .button {
+.moving-card .button {
   background-color: #bdff23;
   display: flex;
   align-items: center;
@@ -222,7 +312,7 @@ p {
   left: 50%;
   transform: translateX(-50%); /* Centers the button */
 }
-.card .button span {
+.moving-card .button span {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -232,7 +322,7 @@ p {
   border-radius: 30px;
   background: #d6ff77;
 }
-.card .button:hover {
+.moving-card .button:hover {
   box-shadow: 0 0 15px #bdff23;
 }
 
@@ -243,7 +333,7 @@ p {
     align-items: center;
   }
 
-  .card {
+  .moving-card {
     width: 90%;
   }
 }
