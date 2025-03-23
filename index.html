@@ -3,440 +3,540 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marketing Website</title>
+    <meta
+      name="description"
+      content="amTop - AI Marketing Agency focused on E-commerce solutions and digital marketing strategies"
+    />
+    <meta name="theme-color" content="#000000" />
+    <title>amTop - AI Marketing Agency</title>
     <link rel="stylesheet" href="index.css" />
+    <link
+      rel="preload"
+      href="fonts/EXCRATCHBold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/EXCRATCHRegular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/EXCRATCHThin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
   </head>
   <body>
-    <div class="light-shadow"></div>
+    <div class="light-shadow" aria-hidden="true"></div>
+    <div class="background-grid" aria-hidden="true"></div>
 
-    <!-- Background Grid Overlay -->
-    <div class="background-grid"></div>
-
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="logo"><a href="#"><img src="images/logo.png" alt="logo"></a></div>
+    <header>
+      <nav class="navbar" aria-label="Main navigation">
+        <div class="logo">
+          <a href="#" aria-label="Home">
+            <img id="logo-img" src="images/logo.png" alt="amTop Logo" />
+          </a>
+        </div>
         <ul class="nav-links">
-            <div class="nav-buttons">
-                <li class="nav-item" data-category="ecommerce">E-COMMERCE</li>
-                <li class="nav-item" data-category="seo">SEO</li>
-                <li class="nav-item" data-category="technology">TECHNOLOGY</li>
-                <li><a class="nav-item" href="about.html">ABOUT</a></li>
-            </div>
-            <li><button class="book-button-nav">Book a Section</button></li>
+          <div class="nav-buttons">
+            <li>
+              <a href="#ecommerce" class="nav-item" data-category="ecommerce"
+                >E-COMMERCE</a
+              >
+            </li>
+            <li><a href="#seo" class="nav-item" data-category="seo">SEO</a></li>
+            <li>
+              <a href="#technology" class="nav-item" data-category="technology"
+                >TECHNOLOGY</a
+              >
+            </li>
+            <li><a class="nav-item" href="about.html">ABOUT</a></li>
+          </div>
+          <li>
+            <button class="book-button-nav">
+              Book a Section <span>→</span>
+            </button>
+          </li>
         </ul>
-    </nav>
-    
-    <!-- Cards Section -->
-    <div class="cards-container">
+      </nav>
+    </header>
+
+    <main>
+      <!-- Cards Section -->
+      <div class="cards-container" aria-label="Service categories">
         <div class="cards" id="ecommerce">
-            <div class="card">
-                <h2>Social Media Marketing</h2>
-                <p> reprehenderit libero dolorum officia rem ut ullam?
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, nulla iusto aliquam in incidunt amet aspernatur deleniti explicabo. Reiciendis modi voluptate iste tenetur magni ratione mollitia placeat. Dolore, esse possimus.
-                </p>
-                <a href="marketing.html">
-                    <button class="book-button-card">Book a Section <span><img src="images/Arrow 1.png" alt="Arrow1"></span></button>
-                </a>
-            </div>
-            <div class="card"><h2>Content Marketing</h2>
-                <p>reprehenderit libero dolorum officia rem ut ullam?
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, nulla iusto aliquam in incidunt amet aspernatur deleniti explicabo. Reiciendis modi voluptate iste tenetur magni ratione mollitia placeat. Dolore, esse possimus.
-                </p>
-                <button class="book-button-card">
-                    Book a Section <span><img src="images/Arrow 1.png" alt="Arrow1"></span>
-                </button>
-            </div>
-            <div class="card"><h2>24/7 Eye on Competitors</h2>
-                <p>reprehenderit libero dolorum officia rem ut ullam?
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, nulla iusto aliquam in incidunt amet aspernatur deleniti explicabo. Reiciendis modi voluptate iste tenetur magni ratione mollitia placeat. Dolore, esse possimus.
-                </p>
-                <button class="book-button-card">
-                    Book a Section <span><img src="images/Arrow 1.png" alt="Arrow1"></span>
-                </button>
-            </div>
+          <div class="card">
+            <h2>Social Media Marketing</h2>
+            <p>
+              reprehenderit libero dolorum officia rem ut ullam? Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit. Voluptates, nulla
+              iusto aliquam in incidunt amet aspernatur deleniti explicabo.
+              Reiciendis modi voluptate iste tenetur magni ratione mollitia
+              placeat. Dolore, esse possimus.
+            </p>
+            <a href="marketing.html">
+              <button class="book-button-card">
+                Book a Section
+                <span><img src="images/Arrow 1.png" alt="Arrow1" /></span>
+              </button>
+            </a>
+          </div>
+          <div class="card">
+            <h2>Content Marketing</h2>
+            <p>
+              reprehenderit libero dolorum officia rem ut ullam? Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit. Voluptates, nulla
+              iusto aliquam in incidunt amet aspernatur deleniti explicabo.
+              Reiciendis modi voluptate iste tenetur magni ratione mollitia
+              placeat. Dolore, esse possimus.
+            </p>
+            <button class="book-button-card">
+              Book a Section
+              <span><img src="images/Arrow 1.png" alt="Arrow1" /></span>
+            </button>
+          </div>
+          <div class="card">
+            <h2>24/7 Eye on Competitors</h2>
+            <p>
+              reprehenderit libero dolorum officia rem ut ullam? Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit. Voluptates, nulla
+              iusto aliquam in incidunt amet aspernatur deleniti explicabo.
+              Reiciendis modi voluptate iste tenetur magni ratione mollitia
+              placeat. Dolore, esse possimus.
+            </p>
+            <button class="book-button-card">
+              Book a Section
+              <span><img src="images/Arrow 1.png" alt="Arrow1" /></span>
+            </button>
+          </div>
         </div>
-        
+
         <div class="cards" id="seo">
-            <div class="card">
-                <h2>Social Media Marketing</h2>
-                <p>reprehenderit libero dolorum officia rem ut ullam?
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, nulla iusto aliquam in incidunt amet aspernatur deleniti explicabo. Reiciendis modi voluptate iste tenetur magni ratione mollitia placeat. Dolore, esse possimus.
-                </p>
-                <button class="book-button-card">
-                    Book a Section <span><img src="images/Arrow 1.png" alt="Arrow1"></span>
-                </button>
-            </div>
-            <div class="card"><h2>Content Marketing</h2>
-                <p>reprehenderit libero dolorum officia rem ut ullam?
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, nulla iusto aliquam in incidunt amet aspernatur deleniti explicabo. Reiciendis modi voluptate iste tenetur magni ratione mollitia placeat. Dolore, esse possimus.
-                </p>
-                <button class="book-button-card">
-                    Book a Section <span><img src="images/Arrow 1.png" alt="Arrow1"></span>
-                </button>
-            </div>
-            <div class="card"><h2>24/7 Eye on Competitors</h2>
-                <p>reprehenderit libero dolorum officia rem ut ullam?
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, nulla iusto aliquam in incidunt amet aspernatur deleniti explicabo. Reiciendis modi voluptate iste tenetur magni ratione mollitia placeat. Dolore, esse possimus.
-                </p>
-                <button class="book-button-card">
-                    Book a Section <span><img src="images/Arrow 1.png" alt="Arrow1"></span>
-                </button>
-            </div>
+          <div class="card">
+            <h2>Social Media Marketing</h2>
+            <p>
+              reprehenderit libero dolorum officia rem ut ullam? Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit. Voluptates, nulla
+              iusto aliquam in incidunt amet aspernatur deleniti explicabo.
+              Reiciendis modi voluptate iste tenetur magni ratione mollitia
+              placeat. Dolore, esse possimus.
+            </p>
+            <button class="book-button-card">
+              Book a Section
+              <span><img src="images/Arrow 1.png" alt="Arrow1" /></span>
+            </button>
+          </div>
+          <div class="card">
+            <h2>Content Marketing</h2>
+            <p>
+              reprehenderit libero dolorum officia rem ut ullam? Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit. Voluptates, nulla
+              iusto aliquam in incidunt amet aspernatur deleniti explicabo.
+              Reiciendis modi voluptate iste tenetur magni ratione mollitia
+              placeat. Dolore, esse possimus.
+            </p>
+            <button class="book-button-card">
+              Book a Section
+              <span><img src="images/Arrow 1.png" alt="Arrow1" /></span>
+            </button>
+          </div>
+          <div class="card">
+            <h2>24/7 Eye on Competitors</h2>
+            <p>
+              reprehenderit libero dolorum officia rem ut ullam? Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit. Voluptates, nulla
+              iusto aliquam in incidunt amet aspernatur deleniti explicabo.
+              Reiciendis modi voluptate iste tenetur magni ratione mollitia
+              placeat. Dolore, esse possimus.
+            </p>
+            <button class="book-button-card">
+              Book a Section
+              <span><img src="images/Arrow 1.png" alt="Arrow1" /></span>
+            </button>
+          </div>
         </div>
-        
+
         <div class="cards" id="technology">
-            <div class="card">
-                <h2>Social Media Marketing</h2>
-                <p>reprehenderit libero dolorum officia rem ut ullam?
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, nulla iusto aliquam in incidunt amet aspernatur deleniti explicabo. Reiciendis modi voluptate iste tenetur magni ratione mollitia placeat. Dolore, esse possimus.
-                </p>
-                <button class="book-button-card">
-                    Book a Section <span><img src="images/Arrow 1.png" alt="Arrow1"></span>
-                </button>
-            </div>
-            <div class="card"><h2>Content Marketing</h2>
-                <p>reprehenderit libero dolorum officia rem ut ullam?
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, nulla iusto aliquam in incidunt amet aspernatur deleniti explicabo. Reiciendis modi voluptate iste tenetur magni ratione mollitia placeat. Dolore, esse possimus.
-                </p>
-                <button class="book-button-card">
-                    Book a Section <span><img src="images/Arrow 1.png" alt="Arrow1"></span>
-                </button>
-            </div>
-            <div class="card"><h2>24/7 Eye on Competitors</h2>
-                <p>reprehenderit libero dolorum officia rem ut ullam?
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, nulla iusto aliquam in incidunt amet aspernatur deleniti explicabo. Reiciendis modi voluptate iste tenetur magni ratione mollitia placeat. Dolore, esse possimus.
-                </p>
-                <button class="book-button-card">
-                    Book a Section <span><img src="images/Arrow 1.png" alt="Arrow1"></span>
-                </button>
-            </div>
+          <div class="card">
+            <h2>Social Media Marketing</h2>
+            <p>
+              reprehenderit libero dolorum officia rem ut ullam? Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit. Voluptates, nulla
+              iusto aliquam in incidunt amet aspernatur deleniti explicabo.
+              Reiciendis modi voluptate iste tenetur magni ratione mollitia
+              placeat. Dolore, esse possimus.
+            </p>
+            <button class="book-button-card">
+              Book a Section
+              <span><img src="images/Arrow 1.png" alt="Arrow1" /></span>
+            </button>
+          </div>
+          <div class="card">
+            <h2>Content Marketing</h2>
+            <p>
+              reprehenderit libero dolorum officia rem ut ullam? Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit. Voluptates, nulla
+              iusto aliquam in incidunt amet aspernatur deleniti explicabo.
+              Reiciendis modi voluptate iste tenetur magni ratione mollitia
+              placeat. Dolore, esse possimus.
+            </p>
+            <button class="book-button-card">
+              Book a Section
+              <span><img src="images/Arrow 1.png" alt="Arrow1" /></span>
+            </button>
+          </div>
+          <div class="card">
+            <h2>24/7 Eye on Competitors</h2>
+            <p>
+              reprehenderit libero dolorum officia rem ut ullam? Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit. Voluptates, nulla
+              iusto aliquam in incidunt amet aspernatur deleniti explicabo.
+              Reiciendis modi voluptate iste tenetur magni ratione mollitia
+              placeat. Dolore, esse possimus.
+            </p>
+            <button class="book-button-card">
+              Book a Section
+              <span><img src="images/Arrow 1.png" alt="Arrow1" /></span>
+            </button>
+          </div>
         </div>
-    </div>
-
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="content">
-        <div class="tagline">AI Marketing Agency Focused on E-commerce</div>
-        <h1>FINAL SEASON OF MARKETING</h1>
-        <div class="info">
-          <p>
-            Lorem ips sit, amet consectetur adipisicing elit.Neque animi sequi,
-            exercitationem
-          </p>
-          <p>doloribus consectetur consequatur, adipisci abasperio sed!</p>
-          <p>
-            Lorem ips sit, amet consectetur adipisicing elit.Neque animi sequi.
-          </p>
-        </div>
-
-        <button class="btn">SEND PROPOSAL</button>
       </div>
 
-      <!-- Image Section -->
-      <div class="dotted-pattern">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-
-      <div class="image-container">
-        <img src="images/woman.png" alt="Marketing Image" />
-      </div>
-    </section>
-
-    <section class="team-section">
-        <video autoplay loop muted playsinline class="background-video">
-          <source src="images/background-vid-amTop.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div class="team-content">
-          <div class="dots-pattern"></div>
-          <h2>Our Team</h2>
-          <p id="team-info">
-            <!-- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste
-            asperiores rem, repellat perferendis sunt voluptatibus dolor officia
-            cum dignissimos molestiae placeat sequi quos quo, porro facere vero,
-            quod similique id! Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Corporis molestias quidem temporibus sint, illum consequuntur
-            natus repudiandae fugit quod quibusdam eum harum doloremque,
-            architecto commodi libero debitis nostrum labore delectus! -->
-          </p>
-          <button class="book-button">Book a Section <span>→</span></button>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="content">
+          <p class="tagline">AI Marketing Agency Focused on E-commerce</p>
+          <h1>FINAL SEASON OF MARKETING</h1>
+          <div class="info">
+            <p>
+              Lorem ipsum sit, amet consectetur adipisicing elit. Neque animi
+              sequi, exercitationem
+            </p>
+            <p>doloribus consectetur consequatur, adipisci abasperio sed!</p>
+            <p>
+              Lorem ipsum sit, amet consectetur adipisicing elit. Neque animi
+              sequi.
+            </p>
+          </div>
+          <button class="btn" aria-label="Send proposal">
+            SEND PROPOSAL <span>→</span>
+          </button>
         </div>
-        <div class="team-image">
-          <img id="team-img" src="images/Amarnath.png" alt="Team Member" />
-          <div class="background-design"></div>
+
+        <div class="image-container">
+          <div class="hero-dots-pattern" aria-hidden="true">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <img
+            src="images/woman.png"
+            alt="Marketing professional"
+            width="500"
+            height="600"
+            loading="lazy"
+          />
         </div>
       </section>
 
-    <section class="analysis-section">
-      <!-- Background Video -->
-      <video autoplay loop muted playsinline class="background-video">
-        <source src="images/bubble_background_amTop.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      <!-- Team Section -->
 
-      <div class="content-2-header">
-        <h2>World First Large Analysis Models</h2>
-      </div>
+      <section class="team-section" aria-label="Our team">
+        <video
+          autoplay
+          loop
+          muted
+          playsinline
+          class="background-video"
+          aria-hidden="true"
+        >
+          <source src="images/background-vid-amTop.mp4" type="video/mp4" />
+        </video>
+        <div class="team-content">
+          <div class="dots-pattern" aria-hidden="true"></div>
+          <h2>Our Team</h2>
+          <p id="team-info"></p>
+          <button class="book-button" aria-label="Book a section">
+            Book a Section <span aria-hidden="true">→</span>
+          </button>
+        </div>
+        <div class="team-image">
+          <img
+            id="team-img"
+            src="images/Amarnath.png"
+            alt="Team member portrait"
+            width="400"
+            height="500"
+            loading="lazy"
+          />
+          <div class="background-design" aria-hidden="true">
+            <span></span>
+          </div>
+        </div>
+      </section>
+      
+      <!-- analysis section -->
 
-      <div class="content-2">
-        <div class="written_content">
+      <section class="analysis-section" aria-label="Analysis models">
+        <video
+          autoplay
+          loop
+          muted
+          playsinline
+          class="background-video"
+          aria-hidden="true"
+        >
+          <source src="images/bubble_background_amTop.mp4" type="video/mp4" />
+        </video>
+
+        <div class="content-2-header">
+          <h2>World First Large Analysis Models</h2>
+        </div>
+
+        <div class="content-2">
+          <div class="written_content">
+            <p>
+              Le Lorem Ipsum est simplement du faux texte employé dans la
+              composition et la mise en page avant impression. Le Lorem Ipsum
+              est le faux texte standard de l'imprimerie depuis les annéesLe
+              Lorem Ipsum est simplement du faux texte employé dans la
+              composition.
+            </p>
+          </div>
+          <button class="book-button" aria-label="Book a section">
+            Book a Section <span aria-hidden="true">→</span>
+          </button>
+        </div>
+
+        <div class="content-container">
+          <div class="dots-pattern-vert" aria-hidden="true"></div>
+          <img
+            src="images/ipadimg.png"
+            alt="Dashboard Analysis Interface"
+            width="800"
+            height="600"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      <section class="marketing-section">
+        <div class="first-part">
+          <div class="text">
+            <h2>How amTop Changed the Marketing</h2>
+            <p>
+              Le Lorem Ipsum est simplement du faux texte employé dans la
+              composition et la mise en page avant impression. Lorem ipsum dolor
+              sit amet consectetur adipisicing elit. Aut quasi beatae,
+              asperiores optio recusandae laudantium tempora eos a enim harum
+              odit animi omnis perspiciatis doloribus quo, cumque quos? Quia,
+              cumque! Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Numquam molestiae dicta consequatur sequi quidem aut nam labore
+              accusamus itaque fuga dolorum, minus impedit architecto soluta
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Accusantium architecto recusandae, error dolorum laborum nesciunt
+              consequatur dolorem! Deserunt omnis soluta blanditiis, repudiandae
+              impedit cum, officiis alias deleniti nam fugiat minima! cupiditate
+              sunt eos illo dolore?
+            </p>
+          </div>
+          <div class="why-section">
+            <h2>WHY?<br />Book a Section</h2>
+            <p>
+              Le Lorem Ipsum est simplement du faux texte employé dans la
+              composition et la mise en page avant impression. Le Lorem Ipsum
+              est le faux texte standard de l'imprimerie depuis.
+            </p>
+            <button class="arrow-button">→</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid-section">
+        <div class="grid-container">
+          <div class="grid-item">
+            <div class="image-container" id="spider-container">
+              <div class="text-overlay">
+                <h3>Know everything<br />about everything</h3>
+                <div class="text-content-bottom">
+                  <p>
+                    Le Lorem Ipsum est simplement du faux texte employé dans la
+                    composition et la mise en page avant impression. Le Lorem
+                    Ipsum est le faux texte standard de l'imprimerie depuis les
+                    annéesLe Lorem Ipsum est simplement du faux texte employé
+                    dans la composition et la mise en.
+                  </p>
+                  <button class="book-button-grid">
+                    Book a Section <span>→</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="image-container" id="owl-container">
+              <div class="text-overlay">
+                <h3>See Everything</h3>
+                <div class="text-content-bottom">
+                  <p>
+                    Le Lorem Ipsum est simplement du faux texte employé dans la
+                    composition et la mise en page avant impression. Le Lorem
+                    Ipsum est le faux texte standard de l'imprimerie depuis les
+                    annéesLe Lorem Ipsum est simplement du faux texte employé
+                    dans la composition et la mise en.
+                  </p>
+                  <button class="book-button-grid">
+                    Book a Section <span>→</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="image-container" id="puma-container">
+              <div class="text-overlay">
+                <h3>Be Fast, and Be<br />The First in market</h3>
+                <div class="text-content-bottom">
+                  <p>
+                    Le Lorem Ipsum est simplement du faux texte employé dans la
+                    composition et la mise en page avant impression. Le Lorem
+                    Ipsum est le faux texte standard de l'imprimerie depuis les
+                    annéesLe Lorem Ipsum est simplement du faux texte employé
+                    dans la composition et la mise en.
+                  </p>
+                  <button class="book-button-grid">
+                    Book a Section <span>→</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="image-container" id="robot-container">
+              <div class="text-overlay">
+                <h3>Future Ready,<br />Growth Ready</h3>
+                <div class="text-content-bottom">
+                  <p>
+                    Le Lorem Ipsum est simplement du faux texte employé dans la
+                    composition et la mise en page avant impression. Le Lorem
+                    Ipsum est le faux texte standard de l'imprimerie depuis les
+                    annéesLe Lorem Ipsum est simplement du faux texte employé
+                    dans la composition et la mise en.
+                  </p>
+                  <button class="book-button-grid">
+                    Book a Section <span>→</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="social-media-section">
+        <!-- Left Side -->
+        <div class="left-panel">
+          <!-- Dotted Pattern -->
+          <div class="dotted-pattern2">
+            <img src="images/Group 25.png" alt="Dotted Pattern" />
+          </div>
+
+          <!-- Ads List -->
+          <div class="ads-list">
+            <div class="ad-card active">
+              <h3>Social Media Marketing</h3>
+              <p>
+                Le Lorem Ipsum est simplement du faux texte employé dans la
+                composition et la mise en page avant impression.
+              </p>
+              <span class="arrow">
+                <img src="images/Arrow 3.png" alt="Arrow" />
+              </span>
+            </div>
+            <div class="ad-card">
+              <h3>Google Ads</h3>
+              <p>
+                Le Lorem Ipsum est simplement du faux texte employé dans la
+                composition et la mise en page avant impression.
+              </p>
+              <span class="arrow">
+                <img src="images//Arrow 4.png" alt="Arrow" />
+              </span>
+            </div>
+            <div class="ad-card">
+              <h3>LinkedIn Ads</h3>
+              <p>
+                Le Lorem Ipsum est simplement du faux texte employé dans la
+                composition et la mise en page avant impression.
+              </p>
+              <span class="arrow">
+                <img src="images/Arrow 4.png" alt="Arrow" />
+              </span>
+            </div>
+            <div class="ad-card">
+              <h3>SEO</h3>
+              <p>
+                Le Lorem Ipsum est simplement du faux texte employé dans la
+                composition et la mise en page avant impression.
+              </p>
+              <span class="arrow">
+                <img src="images/Arrow 4.png" alt="Arrow" />
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side -->
+        <div class="right-panel">
+          <h2>Social Media Marketing</h2>
           <p>
             Le Lorem Ipsum est simplement du faux texte employé dans la
             composition et la mise en page avant impression. Le Lorem Ipsum est
-            le faux texte standard de l'imprimerie depuis les annéesLe Lorem
-            Ipsum est simplement du faux texte employé dans la composition.
+            le faux texte standard de l'imprimerie depuis les années 1500...
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+            reprehenderit placeat eaque tempore deleniti aut sunt error quos ea
+            suscipit omnis, non assumenda id similique corporis architecto
+            dignissimos nesciunt officiis! Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Accusantium nesciunt nulla corporis ut
+            aliquam eveniet facilis, vitae ipsa mollitia necessitatibus magni
+            blanditiis, animi, doloremque voluptatem veritatis facere qui rerum.
+            Aut. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Maiores iure sint unde? Nulla, rem quaerat soluta, iusto cum
+            nesciunt itaque, facilis aperiam ratione voluptatem est illo tempora
+            vitae id enim. Lorem ipsum dolor sit amet consectetur, adipisicing
+            elit. Aperiam reiciendis obcaecati minus eveniet explicabo earum
+            blanditiis aliquid iste! Tempora sunt sed earum nisi itaque
+            perspiciatis adipisci consectetur porro quis ab. Lorem ipsum dolor
+            sit amet, consectetur adipisicing elit. Libero ex est deleniti modi
+            voluptate quo impedit ipsa. Unde ipsa iusto nostrum consequatur
+            molestias architecto, aliquid debitis, eaque excepturi, modi saepe.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+            dicta laudantium quo ex tempora, asperiores consequatur dolorum odit
+            provident suscipit minus vero voluptatibus nihil incidunt in hic?
+            Cum, autem reiciendis.
           </p>
+          <button class="book-button">Book a Section <span>→</span></button>
         </div>
-        <button class="book-button">Book a Section <span>→</span></button>
-      </div>
+      </section>
+    </main>
 
-      <div class="content-container">
-        <div class="dots-pattern-vert"></div>
-        <img src="images/ipadimg.png" alt="Dashboard Analysis" />
-      </div>
-    </section>
-
-    <section class="analysis-section">
-      <!-- Background Video -->
-      <video autoplay loop muted playsinline class="background-video">
-        <source src="images/bubble_background_amTop.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
-      <div class="content-2-header">
-        <h2>World First Large Analysis Models</h2>
-      </div>
-
-      <div class="content-2">
-        <div class="written_content">
-          <p>
-            Le Lorem Ipsum est simplement du faux texte employé dans la
-            composition et la mise en page avant impression. Le Lorem Ipsum est
-            le faux texte standard de l'imprimerie depuis les annéesLe Lorem
-            Ipsum est simplement du faux texte employé dans la composition.
-          </p>
-        </div>
-        <button class="book-button">Book a Section <span>→</span></button>
-      </div>
-
-      <div class="content-container">
-        <div class="dots-pattern-vert"></div>
-        <img src="images/ipadimg.png" alt="Dashboard Analysis" />
-      </div>
-    </section>
-
-    <section class="marketing-section">
-      <div class="first-part">
-        <div class="text">
-          <h2>How amTop Changed the Marketing</h2>
-          <p>
-            Le Lorem Ipsum est simplement du faux texte employé dans la
-            composition et la mise en page avant impression. Lorem ipsum dolor
-            sit amet consectetur adipisicing elit. Aut quasi beatae, asperiores
-            optio recusandae laudantium tempora eos a enim harum odit animi
-            omnis perspiciatis doloribus quo, cumque quos? Quia, cumque! Lorem
-            ipsum, dolor sit amet consectetur adipisicing elit. Numquam
-            molestiae dicta consequatur sequi quidem aut nam labore accusamus
-            itaque fuga dolorum, minus impedit architecto soluta Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Accusantium architecto
-            recusandae, error dolorum laborum nesciunt consequatur dolorem!
-            Deserunt omnis soluta blanditiis, repudiandae impedit cum, officiis
-            alias deleniti nam fugiat minima! cupiditate sunt eos illo dolore?
-          </p>
-        </div>
-        <div class="why-section">
-          <h2>WHY?<br />Book a Section</h2>
-          <p>
-            Le Lorem Ipsum est simplement du faux texte employé dans la
-            composition et la mise en page avant impression. Le Lorem Ipsum est
-            le faux texte standard de l'imprimerie depuis.
-          </p>
-          <button class="arrow-button">→</button>
-        </div>
-      </div>
-    </section>
-
-    <section class="grid-section">
-      <div class="grid-container">
-        <div class="grid-item">
-          <div class="image-container" id="spider-container">
-            <div class="text-overlay">
-              <h3>Know everything<br />about everything</h3>
-              <div class="text-content-bottom">
-                <p>
-                  Le Lorem Ipsum est simplement du faux texte employé dans la
-                  composition et la mise en page avant impression. Le Lorem
-                  Ipsum est le faux texte standard de l'imprimerie depuis les
-                  annéesLe Lorem Ipsum est simplement du faux texte employé dans
-                  la composition et la mise en.
-                </p>
-                <button class="book-button-grid">
-                  Book a Section <span>→</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="grid-item">
-          <div class="image-container" id="owl-container">
-            <div class="text-overlay">
-              <h3>See Everything</h3>
-              <div class="text-content-bottom">
-                <p>
-                  Le Lorem Ipsum est simplement du faux texte employé dans la
-                  composition et la mise en page avant impression. Le Lorem
-                  Ipsum est le faux texte standard de l'imprimerie depuis les
-                  annéesLe Lorem Ipsum est simplement du faux texte employé dans
-                  la composition et la mise en.
-                </p>
-                <button class="book-button-grid">
-                  Book a Section <span>→</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="grid-item">
-          <div class="image-container" id="puma-container">
-            <div class="text-overlay">
-              <h3>Be Fast, and Be<br />The First in market</h3>
-              <div class="text-content-bottom">
-                <p>
-                  Le Lorem Ipsum est simplement du faux texte employé dans la
-                  composition et la mise en page avant impression. Le Lorem
-                  Ipsum est le faux texte standard de l'imprimerie depuis les
-                  annéesLe Lorem Ipsum est simplement du faux texte employé dans
-                  la composition et la mise en.
-                </p>
-                <button class="book-button-grid">
-                  Book a Section <span>→</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="grid-item">
-          <div class="image-container" id="robot-container">
-            <div class="text-overlay">
-              <h3>Future Ready,<br />Growth Ready</h3>
-              <div class="text-content-bottom">
-                <p>
-                  Le Lorem Ipsum est simplement du faux texte employé dans la
-                  composition et la mise en page avant impression. Le Lorem
-                  Ipsum est le faux texte standard de l'imprimerie depuis les
-                  annéesLe Lorem Ipsum est simplement du faux texte employé dans
-                  la composition et la mise en.
-                </p>
-                <button class="book-button-grid">
-                  Book a Section <span>→</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="social-media-section">
-      <!-- Left Side -->
-      <div class="left-panel">
-        <!-- Dotted Pattern -->
-        <div class="dotted-pattern2">
-          <img src="images/Group 25.png" alt="Dotted Pattern" />
-        </div>
-
-        <!-- Ads List -->
-        <div class="ads-list">
-          <div class="ad-card active">
-            <h3>Social Media Marketing</h3>
-            <p>
-              Le Lorem Ipsum est simplement du faux texte employé dans la
-              composition et la mise en page avant impression.
-            </p>
-            <span class="arrow">
-              <img src="images/Arrow 3.png" alt="Arrow" />
-            </span>
-          </div>
-          <div class="ad-card">
-            <h3>Google Ads</h3>
-            <p>
-              Le Lorem Ipsum est simplement du faux texte employé dans la
-              composition et la mise en page avant impression.
-            </p>
-            <span class="arrow">
-              <img src="images//Arrow 4.png" alt="Arrow" />
-            </span>
-          </div>
-          <div class="ad-card">
-            <h3>LinkedIn Ads</h3>
-            <p>
-              Le Lorem Ipsum est simplement du faux texte employé dans la
-              composition et la mise en page avant impression.
-            </p>
-            <span class="arrow">
-              <img src="images/Arrow 4.png" alt="Arrow" />
-            </span>
-          </div>
-          <div class="ad-card">
-            <h3>SEO</h3>
-            <p>
-              Le Lorem Ipsum est simplement du faux texte employé dans la
-              composition et la mise en page avant impression.
-            </p>
-            <span class="arrow">
-              <img src="images/Arrow 4.png" alt="Arrow" />
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Right Side -->
-      <div class="right-panel">
-        <h2>Social Media Marketing</h2>
-        <p>
-          Le Lorem Ipsum est simplement du faux texte employé dans la
-          composition et la mise en page avant impression. Le Lorem Ipsum est le
-          faux texte standard de l’imprimerie depuis les années 1500... Lorem
-          ipsum dolor sit amet consectetur, adipisicing elit. Sequi
-          reprehenderit placeat eaque tempore deleniti aut sunt error quos ea
-          suscipit omnis, non assumenda id similique corporis architecto
-          dignissimos nesciunt officiis! Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Accusantium nesciunt nulla corporis ut aliquam
-          eveniet facilis, vitae ipsa mollitia necessitatibus magni blanditiis,
-          animi, doloremque voluptatem veritatis facere qui rerum. Aut. Lorem
-          ipsum dolor sit amet consectetur adipisicing elit. Maiores iure sint
-          unde? Nulla, rem quaerat soluta, iusto cum nesciunt itaque, facilis
-          aperiam ratione voluptatem est illo tempora vitae id enim. Lorem ipsum
-          dolor sit amet consectetur, adipisicing elit. Aperiam reiciendis
-          obcaecati minus eveniet explicabo earum blanditiis aliquid iste!
-          Tempora sunt sed earum nisi itaque perspiciatis adipisci consectetur
-          porro quis ab. Lorem ipsum dolor sit amet, consectetur adipisicing
-          elit. Libero ex est deleniti modi voluptate quo impedit ipsa. Unde
-          ipsa iusto nostrum consequatur molestias architecto, aliquid debitis,
-          eaque excepturi, modi saepe. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Temporibus dicta laudantium quo ex tempora,
-          asperiores consequatur dolorum odit provident suscipit minus vero
-          voluptatibus nihil incidunt in hic? Cum, autem reiciendis.
-        </p>
-        <button class="book-button">Book a Section <span>→</span></button>
-      </div>
-    </section>
-
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
   </body>
 </html>
