@@ -83,6 +83,88 @@ const updateTeamSection = () => {
   // Update content with animation
   requestAnimationFrame(() => {
     setTimeout(() => {
+      teamContent.innerHTML = teamMembers[currentIndex].description;
+      teamImage.src = teamMembers[currentIndex].image;
+      teamContent.classList.add("active");
+      teamImage.classList.add("active");
+      currentIndex = (currentIndex + 1) % teamMembers.length; // Loop back to the first
+    }, 500); // Small delay for smooth transition
+  }
+  // Run animation every 5 seconds
+  setInterval(updateTeamSection, 5000);
+  // Initial setup
+  document.addEventListener("DOMContentLoaded", () => {
+    updateTeamSection(); // Start with first team member
+  });
+
+//   Social Media Marketing js code 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const adCards = document.querySelectorAll(".ad-card");
+    const rightPanel = document.querySelector(".right-panel");
+    
+    // Default content (Social Media Marketing)
+    const defaultContent = {
+        title: "Social Media Marketing",
+        description: `Le Lorem Ipsum est simplement du faux texte employé dans la 
+        composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard 
+        de l’imprimerie depuis les années 1500... Lorem ipsum dolor sit amet consectetur, adipisicing elit.`
+    };
+
+    const contentData = [
+        {
+            title: "Social Media Marketing",
+            description: `Le Lorem Ipsum est simplement du faux texte employé dans la 
+            composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard 
+            de l’imprimerie depuis les années 1500... Lorem ipsum dolor sit amet consectetur, adipisicing elit.`
+        },
+        {
+            title: "Google Ads",
+            description: `Google Ads is a powerful platform that helps businesses reach their target 
+            audience through search and display advertising. It provides various tools to optimize ad 
+            campaigns for better conversion rates.`
+        },
+        {
+            title: "LinkedIn Ads",
+            description: `LinkedIn Ads allow professionals and businesses to connect with a 
+            highly targeted audience. It offers campaign objectives, audience segmentation, and analytics to 
+            maximize ad performance.`
+        },
+        {
+            title: "SEO",
+            description: `SEO (Search Engine Optimization) enhances website visibility on search 
+            engines like Google. It involves optimizing content, keywords, and backlinks to improve 
+            organic search rankings.`
+        }
+    ];
+
+    // Function to update content
+    function updateContent(index) {
+        // Update right panel content
+        rightPanel.querySelector("h2").innerText = contentData[index].title;
+        rightPanel.querySelector("p").innerText = contentData[index].description;
+
+        // Update active card styling
+        adCards.forEach((card, i) => {
+            if (i === index) {
+                card.classList.add("active");
+            } else {
+                card.classList.remove("active");
+            }
+        });
+    }
+
+    // Add click event to each ad card
+    adCards.forEach((card, index) => {
+        card.addEventListener("click", function () {
+            updateContent(index);
+        });
+    });
+
+    // Set default active state
+    updateContent(0);
+});
+
       DOM.teamContent.innerHTML = member.description;
       DOM.teamImage.src = member.image;
       DOM.teamImage.alt = `${member.name}'s portrait`;
