@@ -125,23 +125,31 @@ const teamMembers = [
         "Gaurav Upadhyay - As the Chief Scientist at amTop, I lead the development of AI-driven marketing intelligence that transforms how brands engage with their audiences. My expertise in machine learning, natural language processing (NLP), and predictive analytics enables amTop to stay ahead of industry trends, providing businesses with data-driven, ethical, and high-impact marketing solutions. By leveraging advanced AI methodologies, I ensure that our platform not only analyzes current market dynamics but also predicts future shifts, empowering brands with actionable insights.",
     },
   ];
+  
   let currentIndexTeam = 0;
-  const teamContent = document.querySelector(".team-content p");
-  const teamImage = document.querySelector(".team-image img");
+  const teamContent = document.querySelector("#team-info"); // Now using ID instead of class
+  const teamImage = document.querySelector("#team-img"); // Now using ID instead of class
+  
   function updateTeamSection() {
     teamContent.classList.remove("active");
     teamImage.classList.remove("active");
+  
     setTimeout(() => {
       teamContent.innerHTML = teamMembers[currentIndexTeam].description;
       teamImage.src = teamMembers[currentIndexTeam].image;
+  
       teamContent.classList.add("active");
       teamImage.classList.add("active");
-      currentIndexTeam = (currentIndexTeam + 1) % teamMembers.length; // Loop back to the first
-    }, 500); // Small delay for smooth transition
+  
+      currentIndexTeam = (currentIndexTeam + 1) % teamMembers.length; // Loop back
+    }, 500);
   }
+  
   // Run animation every 5 seconds
   setInterval(updateTeamSection, 5000);
+  
   // Initial setup
-  document.addEventListener("DOMContentLoaded", () => {
-    updateTeamSection(); // Start with first team member
+  document.addEventListener("DOMContentLoaded", function () {
+    updateTeamSection(); // Start with the first team member
   });
+  

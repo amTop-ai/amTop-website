@@ -192,26 +192,36 @@ body {
   padding-right: 90px;
 }
 .content {
-  padding-left: 60px;
+  /* padding-left: 60px; */
 }
-.info {
-  /* padding-left:60px ; */
+.info p{
+  line-height: 1.8;
 }
 
 /* Neon Glow for Heading */
-h1 {
-  font-size: 3em;
-  text-transform: uppercase;
-  font-family: "MyCustomFont", sans-serif;
-  margin-bottom: 10px;
+.content h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    line-height: 1.1;
+    width:90%;
+    color: white;
+    font-weight: lighter;
+    margin-top:35px;
+    margin-bottom: 20px;
+    margin-left:35px;
 }
 
 /* Tagline Border Effect */
 .tagline {
   border: 2px solid #bdff23;
   padding: 15px;
+  margin-top: 20px;
   display: inline-block;
-  border-radius: 20px;
+  justify-content: center;
+  align-items:center;
+  border-radius: 40px;
   font-size: larger;
   box-shadow: 0px 0px 10px #bdff23;
   /* font-family: 'MyCustomFont', sans-serif; */
@@ -234,6 +244,8 @@ p {
 /* Wrapper to limit visible cards */
 .carousel-wrapper {
   width: 1190px; /* Show 3 cards at a time */
+  padding-top:10px;
+  padding-bottom: 10px;
   overflow: hidden;
   position: relative;
 }
@@ -241,7 +253,7 @@ p {
 /* Inner scrolling section */
 .carousel {
   display: flex;
-  gap: 20px;
+  gap: 49px;
   transition: transform 0.5s ease-in-out; /* Smooth transition */
 }
 
@@ -254,7 +266,7 @@ p {
   border: 2px solid #bdff23;
   padding: 20px;
   border-radius: 10px;
-  text-align: center;
+  text-align: left;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
@@ -298,13 +310,13 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 70%;
+  width: 80%;
   color: black;
-  padding: 10px 15px;
+  padding: 15px 10px;
   margin-top: 20px;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 20px;
+  border-radius: 30px;
   box-shadow: 0 0 10px #bdff23;
 
   /* Positioning */
@@ -319,7 +331,8 @@ p {
   justify-content: center;
   margin-left: 10px;
   font-size: 1.1em;
-  width: 80px;
+  width: 70px;
+  height: 35px;
   border-radius: 30px;
   background: #d6ff77;
 }
@@ -396,9 +409,9 @@ p {
   font-size: 24px;
   cursor: pointer;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 20px;
   width: 250px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 /* AI Section Layout */
@@ -459,13 +472,15 @@ p {
 }
 
 /* Right Side - AI Image */
-.image-container {
+.image-container-ai {
   width: 50%;
+  height:100vh;
   text-align: right;
 }
 
-.image-container img {
-  max-width: 100%;
+.image-container-ai img {
+  max-width: 130%;
+  height:100vh;
   border-radius: 10px;
   /* box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2); */
 }
@@ -478,21 +493,22 @@ p {
   }
 
   .text-content,
-  .image-container {
+  .image-container-ai {
     width: 100%;
   }
 
-  .image-container {
+  .image-container-ai img{
     text-align: center;
+    height:100vh;
   }
 }
-.book-button {
+.book-button-ai {
   display: flex;
   align-items: center;
   background: #a3ff00;
   color: black;
-  padding: 20px 20px;
-  border-radius: 30px;
+  padding: 15px 20px;
+  border-radius:40px;
   border: none;
   cursor: pointer;
   font-weight: bold;
@@ -503,18 +519,19 @@ p {
   /* font-family: 'MyCustomFont', sans-serif; */
 }
 
-.book-button:hover {
+.book-button-ai:hover {
   transform: scale(1.05);
   box-shadow: 0px 0px 23px #bdff23;
 }
 
-.book-button span {
+.book-button-ai span {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-left: 10px;
   font-size: 1.2em;
-  width: 80px;
+  width: 70px;
+  height:45px;
   border-radius: 30px;
   background: #d6ff77;
 }
@@ -544,7 +561,7 @@ p {
 
 /* Title */
 .deeper-title {
-  font-size: 90px;
+  font-size: 115px;
   color: white;
   font-weight: lighter;
   margin-bottom: 40px;
@@ -574,10 +591,10 @@ p {
 
 .background-design1 {
   position: absolute;
-  top: 3%;
+  top: 16%;
   right: 16%;
-  width: 950px;
-  height: 465px;
+  width: 900px;
+  height: 400px;
   background: url("images/Union\ \(1\).png") no-repeat center;
   background-size: cover;
   z-index: 0; /* Places it behind the deeper-content */
@@ -588,12 +605,12 @@ p {
 .WhitePaper-button {
   display: flex;
   align-items: center;
-  width: 400px;
+  width: 340px;
   background: hsl(82, 100%, 50%);
   margin-left: 270px;
   color: black;
-  padding: 20px 20px;
-  border-radius: 30px;
+  padding: 15px 20px;
+  border-radius: 40px;
   border: none;
   cursor: pointer;
   font-weight: bold;
@@ -615,7 +632,8 @@ p {
   justify-content: center;
   margin-left: 10px;
   font-size: 1.2em;
-  width: 80px;
+  width: 70px;
+  height:45px;
   border-radius: 30px;
   background: #d6ff77;
 }
@@ -635,6 +653,8 @@ p {
   .team-content {
     width: 50%;
     position: relative;
+    z-index:2;
+    opacity: 1;
     margin-left: 50px;
     transition: opacity 0.5s ease-in-out;
   }
@@ -713,6 +733,8 @@ p {
   .team-image {
     width: 40%;
     transition: opacity 0.5s ease-in-out;
+    position: relative;
+    z-index: 2;
   }
   .team-image img {
     width: 290px;
@@ -723,6 +745,17 @@ p {
     display: block;
     filter: grayscale(100%);
   }
+
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
   .background-design {
     position: absolute;
     top: 17%;
