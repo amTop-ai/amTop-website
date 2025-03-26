@@ -202,69 +202,75 @@ body {
 
 /* Highlight Tab */
 .highlight-tab {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5px 15px;
-  border: 2px solid #9eff39;
-  box-shadow: 0px 0px 10px #bdff23;
-  width: 175px;
-  border-radius: 20px;
-  background-color: #000;
-  font-size: 25px;
-  margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 15px;
+    border: 2px solid #9EFF39;
+    box-shadow: 0px 0px 10px #bdff23;
+    width:175px;
+    border-radius: 20px;
+    background-color: #000;
+    font-size: 25px;
+    margin-bottom: 0px;
+    padding-bottom: 2px;
 }
 
 /* Heading */
 .left-content h1 {
-  font-size: 45px;
-  font-stretch: extra-expanded;
-  font-weight: lighter;
-  width: 800px;
-  margin-bottom: 40px;
-  font-family: "MyCustomFont", sans-serif;
+    font-size: 70px;
+    line-height: 1.1;
+    width:90%;
+    color: white;
+    font-weight: lighter;
+    margin-top:10px;
+    margin-bottom: 20px;
 }
 
 /* Description */
-p {
-  font-size: 16px;
-  line-height: 1.6;
-  opacity: 0.8;
+.left-content p {
+    font-size: 16px;
+    width:90%;
+    line-height: 2;
+    opacity: 0.8;
+    margin-top: 10px;
+    margin-bottom:20px;
 }
 
 /* Button */
-.book-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #a3ff00;
-  color: black;
-  padding: 20px 20px;
-  border-radius: 50px;
-  width: 400px;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 2em;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  box-shadow: 0px 0px 20px #bdff23;
-  /* font-family: 'MyCustomFont', sans-serif; */
+.book-button-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #A3FF00;
+    color: black;
+    padding: 20px 20px;
+    border-radius: 80px;
+    width: 400px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 2em;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0px 0px 20px #bdff23;
+    /* font-family: 'MyCustomFont', sans-serif; */
 }
 
-.book-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 0px 30px #bdff23;
+.book-button-hero:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 30px #bdff23;
 }
 
-.book-button span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 10px;
-  font-size: 1.2em;
-  width: 80px;
-  border-radius: 30px;
-  background: #d6ff77;
+.book-button-hero span {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    font-size: 1.2em;
+    width:80px;
+    border-radius: 30px;
+    background: #d6ff77;
 }
 
 /* AI Analytics Section */
@@ -300,9 +306,11 @@ p {
 
 /* Dotted Pattern (Top Left) */
 .dotted-pattern {
-  position: absolute;
-  top: 0;
-  left: 75px;
+    position: absolute;
+    z-index: 10;
+    opacity: 100%;
+    top: 30px;
+    left: 90px;
 }
 
 .dotted-pattern img {
@@ -310,11 +318,13 @@ p {
   z-index: 2;
 }
 
+
 /* Content */
 .content {
-  max-width: 60%;
-  padding-left: 75px;
-  z-index: 3; /* Above everything */
+    max-width: 55%;
+    padding-left: 90px;
+    padding-top: 35px;
+    z-index: 3; /* Above everything */
 }
 
 .content h2 {
@@ -330,9 +340,10 @@ p {
 
 /* Spider Image (Right Side) */
 .spider-image {
-  position: relative;
-  max-width: 100%;
-  z-index: 3;
+    position: relative;
+    max-width: 100%;
+    right:8%;
+    z-index: 3;
 }
 
 .spider-image img {
