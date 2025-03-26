@@ -1,608 +1,610 @@
 /* General Styles */
 @font-face {
-    font-family: 'MyCustomFont';
-    src: url('fonts/EXCRATCHBold.woff2') format('woff2'),
-         url('fonts/EXCRATCHRegular.woff2') format('woff2'),
-         url('fonts/EXCRATCHThin.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "MyCustomFont";
+  src: url("fonts/EXCRATCHBold.woff2") format("woff2"),
+    url("fonts/EXCRATCHRegular.woff2") format("woff2"),
+    url("fonts/EXCRATCHThin.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: black;
-    color: white;
-    position: relative;
-    /* font-family: 'MyCustomFont', sans-serif; */
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: black;
+  color: white;
+  position: relative;
+  /* font-family: 'MyCustomFont', sans-serif; */
 }
 
 .light-shadow {
-    position: absolute;
-    left: 20%; /* Adjust to move the glow horizontally */
-    top: 60%; /* Adjust to move it vertically */
-    transform: translate(-50%, -50%); /* Centers the glow */
-    width: 700px; /* Adjust size of glow */
-    height: 250px; 
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, rgba(255, 255, 255, 0) 80%);
-    filter: blur(80px); /* Makes it soft */
-    pointer-events: none; /* So it doesn’t interfere with clicks */
-    z-index: 1; /* Keep it above the grid and dots */
+  position: absolute;
+  left: 20%; /* Adjust to move the glow horizontally */
+  top: 60%; /* Adjust to move it vertically */
+  transform: translate(-50%, -50%); /* Centers the glow */
+  width: 700px; /* Adjust size of glow */
+  height: 250px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.2) 10%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  filter: blur(80px); /* Makes it soft */
+  pointer-events: none; /* So it doesn’t interfere with clicks */
+  z-index: 1; /* Keep it above the grid and dots */
 }
 
 /* Background Grid */
 .background-grid {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #000; /* Black background */
-    background-image: 
-        linear-gradient(rgba(255, 255, 255, 0.2) 2px, transparent 2px), /* Horizontal grid lines */
-        linear-gradient(90deg, rgba(255, 255, 255, 0.2) 2px, transparent 2px); /* Vertical grid lines */
-    background-size: 45px 45px; /* Adjust size for bigger/smaller boxes */
-    z-index: -1;
-    opacity: 0.3; /* Keep it subtle */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #000; /* Black background */
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.2) 2px,
+      transparent 2px
+    ),
+    /* Horizontal grid lines */
+      linear-gradient(90deg, rgba(255, 255, 255, 0.2) 2px, transparent 2px); /* Vertical grid lines */
+  background-size: 45px 45px; /* Adjust size for bigger/smaller boxes */
+  z-index: -1;
+  opacity: 0.3; /* Keep it subtle */
 }
 
 /* Header */
 .navbar {
-    display: flex;
-    /* justify-content: space-between; */
-    align-items: center;
-    /* background-color: black; */
-    padding: 20px;
-    padding-bottom: 0px;
-    color: white;
-    font-family: 'MyCustomFont', sans-serif;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  /* background-color: black; */
+  padding: 20px;
+  padding-bottom: 0px;
+  color: white;
+  font-family: "MyCustomFont", sans-serif;
 }
-.nav-buttons{
-    display: flex;
-    align-items: center;
-    margin-left: 140px;
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  margin-left: 140px;
 }
 
 .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  list-style: none;
 }
 
 .nav-item {
-    cursor: pointer;
-    padding: 10px 15px;
-    font-size: 23px;
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 23px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 .nav-item:hover {
-    color: #A3FF00; /* Neon Green */
+  color: #a3ff00; /* Neon Green */
 }
 
 /* Cards Section */
 .cards-container {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .cards {
-    display: none; /* Hide all cards initially */
-    position: absolute;
-    z-index:10;
-    top: 25px;
-    display: flex;
-    gap: 30px;
-    justify-content: center;
+  display: none; /* Hide all cards initially */
+  position: absolute;
+  z-index: 10;
+  top: 25px;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
 }
 
 .card {
-    background: #111;
-    color: white;
-    padding: 20px;
-    width: 250px;
-    border-radius: 10px;
-    /* text-align: center; */
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+  background: #111;
+  color: white;
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+  /* text-align: center; */
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
 }
-.card a{
-    text-decoration: none;
+.card a {
+  text-decoration: none;
 }
-.card h2{
-    font-size: 2.2rem;
+.card h2 {
+  font-size: 2.2rem;
 }
 /* Button */
 .book-button-nav {
-    background: #A3FF00;
-    color: black;
-    padding: 15px 20px;
-    margin-left: 170px;
-    border-radius: 50px;
-    cursor: pointer;
-    font-size: medium;
-    font-weight: bold;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background: #a3ff00;
+  color: black;
+  padding: 15px 20px;
+  margin-left: 170px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: medium;
+  font-weight: bold;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.book-button-nav:hover{
-    transform: scale(1.05);
-    box-shadow: 0px 0px 10px #bdff23;
+.book-button-nav:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px #bdff23;
 }
 
 .book-button-card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #A3FF00;
-    color: black;
-    padding: 10px 10px;
-    margin-bottom: 15px;
-    border-radius: 50px;
-    width: 100%;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1em;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    /* font-family: 'MyCustomFont', sans-serif; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #a3ff00;
+  color: black;
+  padding: 10px 10px;
+  margin-bottom: 15px;
+  border-radius: 50px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  /* font-family: 'MyCustomFont', sans-serif; */
 }
 
 .book-button-card:hover {
-    transform: scale(1.05);
-    text-decoration: none;
-    box-shadow: 0px 0px 10px #bdff23;
+  transform: scale(1.05);
+  text-decoration: none;
+  box-shadow: 0px 0px 10px #bdff23;
 }
 
 .book-button-card span {
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 10px;
-    font-size: 1.2em;
-    width:70px;
-    height:40px;
-    border-radius: 50px;
-    background: #d6ff77;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  font-size: 1.2em;
+  width: 70px;
+  height: 40px;
+  border-radius: 50px;
+  background: #d6ff77;
 }
 
 /* Hero Section  */
 
 .Hero-section {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color: white;
-    padding-left: 20px ;
-    min-height:78vh;
-    padding-top:0px;
-    margin-bottom: 0; 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  padding-left: 20px;
+  min-height: 78vh;
+  padding-top: 0px;
+  margin-bottom: 0;
 }
 
 .left-content {
-    width: 50%;
-    text-align: left;
+  width: 50%;
+  text-align: left;
 }
 .right-content {
-    text-align: right;
-
+  text-align: right;
 }
 
 /* Highlight Tab */
 .highlight-tab {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px 15px;
-    border: 2px solid #9EFF39;
-    box-shadow: 0px 0px 10px #bdff23;
-    width:175px;
-    border-radius: 20px;
-    background-color: #000;
-    font-size: 25px;
-    margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 15px;
+  border: 2px solid #9eff39;
+  box-shadow: 0px 0px 10px #bdff23;
+  width: 175px;
+  border-radius: 20px;
+  background-color: #000;
+  font-size: 25px;
+  margin-bottom: 5px;
 }
 
 /* Heading */
 .left-content h1 {
-    font-size: 45px;
-    font-stretch:extra-expanded;
-    font-weight:lighter;
-    width:800px;
-    margin-bottom: 40px;
-    font-family: 'MyCustomFont', sans-serif;
+  font-size: 45px;
+  font-stretch: extra-expanded;
+  font-weight: lighter;
+  width: 800px;
+  margin-bottom: 40px;
+  font-family: "MyCustomFont", sans-serif;
 }
 
 /* Description */
 p {
-    font-size: 16px;
-    line-height: 1.6;
-    opacity: 0.8;
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 0.8;
 }
 
 /* Button */
 .book-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #A3FF00;
-    color: black;
-    padding: 20px 20px;
-    border-radius: 50px;
-    width: 400px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 2em;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    box-shadow: 0px 0px 20px #bdff23;
-    /* font-family: 'MyCustomFont', sans-serif; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #a3ff00;
+  color: black;
+  padding: 20px 20px;
+  border-radius: 50px;
+  width: 400px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 2em;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0px 0px 20px #bdff23;
+  /* font-family: 'MyCustomFont', sans-serif; */
 }
 
 .book-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 30px #bdff23;
+  transform: scale(1.05);
+  box-shadow: 0px 0px 30px #bdff23;
 }
 
 .book-button span {
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 10px;
-    font-size: 1.2em;
-    width:80px;
-    border-radius: 30px;
-    background: #d6ff77;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  font-size: 1.2em;
+  width: 80px;
+  border-radius: 30px;
+  background: #d6ff77;
 }
-
 
 /* AI Analytics Section */
 .ai-analytics {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height:100vh;
-    background-color: black;
-    color: white;
-    margin-top: 0; 
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  background-color: black;
+  color: white;
+  margin-top: 0;
 }
 
 /* Spider Web Background */
 .web-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-start; /* Align to the left */
-    align-items: center;
-    z-index: 1; /* Behind the dotted pattern */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start; /* Align to the left */
+  align-items: center;
+  z-index: 1; /* Behind the dotted pattern */
 }
 
 .web-background img {
-    width: 1520px; /* Adjust size as needed */
-    height:100vh;
-    opacity: 0.2; /* Set opacity for transparency */
+  width: 1520px; /* Adjust size as needed */
+  height: 100vh;
+  opacity: 0.2; /* Set opacity for transparency */
 }
 
 /* Dotted Pattern (Top Left) */
 .dotted-pattern {
-    position: absolute;
-    top: 0;
-    left: 75px;
+  position: absolute;
+  top: 0;
+  left: 75px;
 }
 
 .dotted-pattern img {
-    width: 320px;
-    z-index: 2;
+  width: 320px;
+  z-index: 2;
 }
 
 /* Content */
 .content {
-    max-width: 60%;
-    padding-left: 75px;
-    z-index: 3; /* Above everything */
+  max-width: 60%;
+  padding-left: 75px;
+  z-index: 3; /* Above everything */
 }
 
 .content h2 {
-    color: #aaff00; /* Neon green */
-    font-size: 3.5rem;
-    /* padding-top:60px; */
+  color: #aaff00; /* Neon green */
+  font-size: 3.5rem;
+  /* padding-top:60px; */
 }
 
 .content p {
-    font-size: 1.1rem;
-    line-height: 1.6;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
 /* Spider Image (Right Side) */
 .spider-image {
-    position: relative;
-    max-width: 100%;
-    z-index: 3;
+  position: relative;
+  max-width: 100%;
+  z-index: 3;
 }
 
 .spider-image img {
-    width: 100%;
-    max-height: 700px;
+  width: 100%;
+  max-height: 700px;
 }
 
 /* ai Analysis Section */
 
 /* Analysis Section */
 .analysis-section {
-    position: relative;
-    align-items: center;
-    padding: 70px;
-    color: white;
-    overflow: hidden;
-    min-height: 100vh;
-  }
-  
-  /* Background Video Styling */
-  .background-video {
-    position: absolute;
-    background: rgba(0, 0, 0, 0.8); /* Optional dark overlay */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-  }
-  
-  .content-2 {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    color: white;
-    position: relative;
-  }
-  
-  .content-2-header h2 {
-    font-size: 4.5rem;
-    font-weight: bold;
-    font-family: sans-serif;
-    text-align: left;
-  }
-  
-  .content-2 p {
-    font-size: 1.5rem;
-    line-height: 1.6;
-    opacity: 0.8;
-  }
-  
-  .written_content {
-    max-width: 60%;
-  }
-  
-  .content-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 20px;
-    z-index: 2;
-    padding: 20px;
-  }
-  
-  .dots-pattern-vert {
-    position: absolute;
-    left: 5%;
-    width: 150px;
-    height: 300px;
-    background-image: radial-gradient(#a3ff00 30%, transparent 20%);
-    background-size: 15px 15px;
-  }
-  
-  .content-container img {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 10px;
-  }
-  
+  position: relative;
+  align-items: center;
+  padding: 70px;
+  color: white;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+/* Background Video Styling */
+.background-video {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8); /* Optional dark overlay */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.content-2 {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  color: white;
+  position: relative;
+}
+
+.content-2-header h2 {
+  font-size: 4.5rem;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-align: left;
+}
+
+.content-2 p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.written_content {
+  max-width: 60%;
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  z-index: 2;
+  padding: 20px;
+}
+
+.dots-pattern-vert {
+  position: absolute;
+  left: 5%;
+  width: 150px;
+  height: 300px;
+  background-image: radial-gradient(#a3ff00 30%, transparent 20%);
+  background-size: 15px 15px;
+}
+
+.content-container img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+}
 
 /* Social Media Section */
 .social-media-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 80px;
-    height:130vh;
-    background-color: black;
-    color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 80px;
+  height: 130vh;
+  background-color: black;
+  color: white;
 }
 
 /* Left Panel */
 .left-panel {
-    width: 35%;
-    position: relative;
+  width: 35%;
+  position: relative;
 }
 
 /* Dotted Pattern */
 .dotted-pattern2 {
-    position: absolute;
+  position: absolute;
 }
 
 .dotted-pattern2 img {
-    width: 320px;
+  width: 320px;
 }
 
 /* Ads List */
 .ads-list {
-    padding-top: 150px;
+  padding-top: 150px;
 }
 
 .ad-card {
-    background: transparent;
-    padding: 15px;
-    border-bottom: 3px solid rgb(255, 255, 255,0.8);
-    cursor: pointer;
-    display: wrap;
-    width:280px;
-    align-items: center;
-    justify-content: space-between;
+  background: transparent;
+  padding: 15px;
+  border-bottom: 3px solid rgb(255, 255, 255, 0.8);
+  cursor: pointer;
+  display: wrap;
+  width: 280px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .ad-card h3 {
-    font-size: 1.2rem;
-    margin: 0;
+  font-size: 1.2rem;
+  margin: 0;
 }
 
 .ad-card p {
-    font-size: 0.9rem;
-    opacity: 0.7;
+  font-size: 0.9rem;
+  opacity: 0.7;
 }
 
 /* Highlight the first card */
 .ad-card.active {
-    background: white;
-    color: black;
-    padding: 20px;
-    border-radius: 0px;
+  background: white;
+  color: black;
+  padding: 20px;
+  border-radius: 0px;
 }
 .arrow img {
-    width: 20px;  /* Adjust size as needed */
-    height: auto;
-    margin-left: 260px;  /* Adds spacing between text and image */
+  width: 20px; /* Adjust size as needed */
+  height: auto;
+  margin-left: 260px; /* Adds spacing between text and image */
 }
 
 /* Right Panel */
 .right-panel {
-    width: 70%;
-    padding-right:150px;
+  width: 70%;
+  padding-right: 150px;
 }
 
 .right-panel h2 {
-    color: #aaff00;
-    font-size: 4rem;
+  color: #aaff00;
+  font-size: 4rem;
 }
 
 .right-panel p {
-    font-size: 1.1rem;
-    line-height: 1.6;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
 /* Team Member Section  */
 
 .team-section {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px;
-    color: white;
-    position: relative;
-    overflow: hidden;
-  }
-  .team-content {
-    width: 50%;
-    position: relative;
-    margin-left: 50px;
-    transition: opacity 0.5s ease-in-out;
-  }
-  .team-carousel {
-    width: 40%;
-    overflow: hidden;
-    position: relative;
-  }
-  .team-slider {
-    display: flex;
-    transition: transform 1s ease-in-out;
-  }
-  .team-member {
-    width: 100%;
-    text-align: center;
-    flex-shrink: 0;
-  }
-  .team-member img {
-    width: 290px;
-    height: 420px;
-    border-radius: 5px;
-  }
-  .fade-in {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-  }
-  .fade-in.active {
-    opacity: 1;
-  }
-  .dots-pattern {
-    /* position: absolute; */
-    bottom: 95%;
-    left: 0;
-    width: 240px;
-    height: 100px;
-    background-image: radial-gradient(#A3FF00 30%, transparent 20%);
-    background-size: 17px 17px;
-  }
-  h2 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-  }
-  p {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-  .book-button {
-    display: flex;
-    align-items: center;
-    background: #A3FF00;
-    color: black;
-    padding: 20px 20px;
-    border-radius: 30px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 2em;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    box-shadow: 0px 0px 20px #BDFF23;
-    /* font-family: 'MyCustomFont', sans-serif; */
-  }
-  .book-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 30px #BDFF23;
-  }
-  .book-button span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 10px;
-    font-size: 1.2em;
-    width: 80px;
-    border-radius: 30px;
-    background: #D6FF77;
-  }
-  .team-image {
-    width: 40%;
-    transition: opacity 0.5s ease-in-out;
-  }
-  .team-image img {
-    width: 290px;
-    height: 420px;
-    margin-left: 150px;
-    margin-bottom: 50px;
-    border-radius: 5px;
-    display: block;
-    filter: grayscale(100%);
-  }
-  .background-design {
-    position: absolute;
-    top: 17%;
-    right: 9.5%;
-    width: 290px;
-    height: 420px;
-    background: url("images/Union.png") no-repeat center;
-    background-size: cover;
-    z-index: -1;
-    opacity: 1; /* Makes it subtle */
-  }
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+.team-content {
+  width: 50%;
+  position: relative;
+  margin-left: 50px;
+  transition: opacity 0.5s ease-in-out;
+}
+.team-carousel {
+  width: 40%;
+  overflow: hidden;
+  position: relative;
+}
+.team-slider {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+.team-member {
+  width: 100%;
+  text-align: center;
+  flex-shrink: 0;
+}
+.team-member img {
+  width: 290px;
+  height: 420px;
+  border-radius: 5px;
+}
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.fade-in.active {
+  opacity: 1;
+}
+.dots-pattern {
+  /* position: absolute; */
+  bottom: 95%;
+  left: 0;
+  width: 240px;
+  height: 100px;
+  background-image: radial-gradient(#a3ff00 30%, transparent 20%);
+  background-size: 17px 17px;
+}
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.book-button {
+  display: flex;
+  align-items: center;
+  background: #a3ff00;
+  color: black;
+  padding: 20px 20px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 2em;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0px 0px 20px #bdff23;
+  /* font-family: 'MyCustomFont', sans-serif; */
+}
+.book-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 30px #bdff23;
+}
+.book-button span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  font-size: 1.2em;
+  width: 80px;
+  border-radius: 30px;
+  background: #d6ff77;
+}
+.team-image {
+  width: 40%;
+  transition: opacity 0.5s ease-in-out;
+}
+.team-image img {
+  width: 290px;
+  height: 420px;
+  margin-left: 150px;
+  margin-bottom: 50px;
+  border-radius: 5px;
+  display: block;
+  filter: grayscale(100%);
+}
+.background-design {
+  position: absolute;
+  top: 17%;
+  right: 9.5%;
+  width: 290px;
+  height: 420px;
+  background: url("images/Union.png") no-repeat center;
+  background-size: cover;
+  z-index: -1;
+  opacity: 1; /* Makes it subtle */
+}

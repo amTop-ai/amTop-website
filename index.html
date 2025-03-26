@@ -14,173 +14,251 @@
 
     <!-- Navigation Bar -->
     <nav class="navbar">
-        <div class="logo"><a href="#"><img src="images/logo.png" alt="logo"></a></div>
+      <div class="logo" id="logo-img">
+        <a href="#"><img src="images/logo.png" alt="logo" /></a>
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="nav-buttons">
         <ul class="nav-links">
-            <div class="nav-buttons">
-                <li class="nav-item" data-category="ecommerce">E-COMMERCE</li>
-                <li class="nav-item" data-category="seo">SEO</li>
-                <li class="nav-item" data-category="technology">TECHNOLOGY</li>
-                <li><a class="nav-item" href="about.html">ABOUT</a></li>
-            </div>
-            <li><button class="book-button-nav">Book a Section</button></li>
+          <li class="nav-item" data-category="ecommerce">E-COMMERCE</li>
+          <li class="nav-item" data-category="seo">SEO</li>
+          <li class="nav-item" data-category="technology">TECHNOLOGY</li>
+          <li><a class="nav-item" href="about.html">ABOUT</a></li>
+          <li>
+            <button class="book-button-nav">
+              Book a Section
+            </button>
+          </li>
         </ul>
+      </div>
     </nav>
-    
+
     <!-- Cards Section -->
     <div class="cards-container">
-        <div class="cards" id="ecommerce">
-            <div class="card">
-                <h2>Social Media Marketing</h2>
-                <p> reprehenderit libero dolorum officia rem ut ullam?
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, nulla iusto aliquam in incidunt amet aspernatur deleniti explicabo. Reiciendis modi voluptate iste tenetur magni ratione mollitia placeat. Dolore, esse possimus.
-                </p>
-                <a href="marketing.html">
-                    <button class="book-button-card">Book a Section <span><img src="images/Arrow 1.png" alt="Arrow1"></span></button>
-                </a>
-            </div>
-            <div class="card"><h2>Content Marketing</h2>
-                <p>reprehenderit libero dolorum officia rem ut ullam?
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, nulla iusto aliquam in incidunt amet aspernatur deleniti explicabo. Reiciendis modi voluptate iste tenetur magni ratione mollitia placeat. Dolore, esse possimus.
-                </p>
-                <button class="book-button-card">
-                    Book a Section <span><img src="images/Arrow 1.png" alt="Arrow1"></span>
-                </button>
-            </div>
-            <div class="card"><h2>24/7 Eye on Competitors</h2>
-                <p>reprehenderit libero dolorum officia rem ut ullam?
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, nulla iusto aliquam in incidunt amet aspernatur deleniti explicabo. Reiciendis modi voluptate iste tenetur magni ratione mollitia placeat. Dolore, esse possimus.
-                </p>
-                <button class="book-button-card">
-                    Book a Section <span><img src="images/Arrow 1.png" alt="Arrow1"></span>
-                </button>
-            </div>
+      <div class="cards" id="ecommerce">
+        <div class="card">
+          <h2>Social Media Marketing</h2>
+          <p>
+            reprehenderit libero dolorum officia rem ut ullam? Lorem ipsum dolor
+            sit amet, consectetur adipisicing elit. Voluptates, nulla iusto
+            aliquam in incidunt amet aspernatur deleniti explicabo. Reiciendis
+            modi voluptate iste tenetur magni ratione mollitia placeat. Dolore,
+            esse possimus.
+          </p>
+          <a href="marketing.html">
+            <button class="book-button-card">
+              Book a Section
+              <span><img src="images/Arrow 1.png" alt="Arrow1" /></span>
+            </button>
+          </a>
         </div>
-        
-        <div class="cards" id="seo">
-            <div class="card">
-                <h2>Social Media Marketing</h2>
-                <p>reprehenderit libero dolorum officia rem ut ullam?
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, nulla iusto aliquam in incidunt amet aspernatur deleniti explicabo. Reiciendis modi voluptate iste tenetur magni ratione mollitia placeat. Dolore, esse possimus.
-                </p>
-                <button class="book-button-card">
-                    Book a Section <span><img src="images/Arrow 1.png" alt="Arrow1"></span>
-                </button>
-            </div>
-            <div class="card"><h2>Content Marketing</h2>
-                <p>reprehenderit libero dolorum officia rem ut ullam?
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, nulla iusto aliquam in incidunt amet aspernatur deleniti explicabo. Reiciendis modi voluptate iste tenetur magni ratione mollitia placeat. Dolore, esse possimus.
-                </p>
-                <button class="book-button-card">
-                    Book a Section <span><img src="images/Arrow 1.png" alt="Arrow1"></span>
-                </button>
-            </div>
-            <div class="card"><h2>24/7 Eye on Competitors</h2>
-                <p>reprehenderit libero dolorum officia rem ut ullam?
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, nulla iusto aliquam in incidunt amet aspernatur deleniti explicabo. Reiciendis modi voluptate iste tenetur magni ratione mollitia placeat. Dolore, esse possimus.
-                </p>
-                <button class="book-button-card">
-                    Book a Section <span><img src="images/Arrow 1.png" alt="Arrow1"></span>
-                </button>
-            </div>
+        <div class="card">
+          <h2>Content Marketing</h2>
+          <p>
+            reprehenderit libero dolorum officia rem ut ullam? Lorem ipsum dolor
+            sit amet, consectetur adipisicing elit. Voluptates, nulla iusto
+            aliquam in incidunt amet aspernatur deleniti explicabo. Reiciendis
+            modi voluptate iste tenetur magni ratione mollitia placeat. Dolore,
+            esse possimus.
+          </p>
+          <button class="book-button-card">
+            Book a Section
+            <span><img src="images/Arrow 1.png" alt="Arrow1" /></span>
+          </button>
         </div>
-        
-        <div class="cards" id="technology">
-            <div class="card">
-                <h2>Social Media Marketing</h2>
-                <p>reprehenderit libero dolorum officia rem ut ullam?
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, nulla iusto aliquam in incidunt amet aspernatur deleniti explicabo. Reiciendis modi voluptate iste tenetur magni ratione mollitia placeat. Dolore, esse possimus.
-                </p>
-                <button class="book-button-card">
-                    Book a Section <span><img src="images/Arrow 1.png" alt="Arrow1"></span>
-                </button>
-            </div>
-            <div class="card"><h2>Content Marketing</h2>
-                <p>reprehenderit libero dolorum officia rem ut ullam?
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, nulla iusto aliquam in incidunt amet aspernatur deleniti explicabo. Reiciendis modi voluptate iste tenetur magni ratione mollitia placeat. Dolore, esse possimus.
-                </p>
-                <button class="book-button-card">
-                    Book a Section <span><img src="images/Arrow 1.png" alt="Arrow1"></span>
-                </button>
-            </div>
-            <div class="card"><h2>24/7 Eye on Competitors</h2>
-                <p>reprehenderit libero dolorum officia rem ut ullam?
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, nulla iusto aliquam in incidunt amet aspernatur deleniti explicabo. Reiciendis modi voluptate iste tenetur magni ratione mollitia placeat. Dolore, esse possimus.
-                </p>
-                <button class="book-button-card">
-                    Book a Section <span><img src="images/Arrow 1.png" alt="Arrow1"></span>
-                </button>
-            </div>
+        <div class="card">
+          <h2>24/7 Eye on Competitors</h2>
+          <p>
+            reprehenderit libero dolorum officia rem ut ullam? Lorem ipsum dolor
+            sit amet, consectetur adipisicing elit. Voluptates, nulla iusto
+            aliquam in incidunt amet aspernatur deleniti explicabo. Reiciendis
+            modi voluptate iste tenetur magni ratione mollitia placeat. Dolore,
+            esse possimus.
+          </p>
+          <button class="book-button-card">
+            Book a Section
+            <span><img src="images/Arrow 1.png" alt="Arrow1" /></span>
+          </button>
         </div>
+      </div>
+
+      <div class="cards" id="seo">
+        <div class="card">
+          <h2>Social Media Marketing</h2>
+          <p>
+            reprehenderit libero dolorum officia rem ut ullam? Lorem ipsum dolor
+            sit amet, consectetur adipisicing elit. Voluptates, nulla iusto
+            aliquam in incidunt amet aspernatur deleniti explicabo. Reiciendis
+            modi voluptate iste tenetur magni ratione mollitia placeat. Dolore,
+            esse possimus.
+          </p>
+          <button class="book-button-card">
+            Book a Section
+            <span><img src="images/Arrow 1.png" alt="Arrow1" /></span>
+          </button>
+        </div>
+        <div class="card">
+          <h2>Content Marketing</h2>
+          <p>
+            reprehenderit libero dolorum officia rem ut ullam? Lorem ipsum dolor
+            sit amet, consectetur adipisicing elit. Voluptates, nulla iusto
+            aliquam in incidunt amet aspernatur deleniti explicabo. Reiciendis
+            modi voluptate iste tenetur magni ratione mollitia placeat. Dolore,
+            esse possimus.
+          </p>
+          <button class="book-button-card">
+            Book a Section
+            <span><img src="images/Arrow 1.png" alt="Arrow1" /></span>
+          </button>
+        </div>
+        <div class="card">
+          <h2>24/7 Eye on Competitors</h2>
+          <p>
+            reprehenderit libero dolorum officia rem ut ullam? Lorem ipsum dolor
+            sit amet, consectetur adipisicing elit. Voluptates, nulla iusto
+            aliquam in incidunt amet aspernatur deleniti explicabo. Reiciendis
+            modi voluptate iste tenetur magni ratione mollitia placeat. Dolore,
+            esse possimus.
+          </p>
+          <button class="book-button-card">
+            Book a Section
+            <span><img src="images/Arrow 1.png" alt="Arrow1" /></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="cards" id="technology">
+        <div class="card">
+          <h2>Social Media Marketing</h2>
+          <p>
+            reprehenderit libero dolorum officia rem ut ullam? Lorem ipsum dolor
+            sit amet, consectetur adipisicing elit. Voluptates, nulla iusto
+            aliquam in incidunt amet aspernatur deleniti explicabo. Reiciendis
+            modi voluptate iste tenetur magni ratione mollitia placeat. Dolore,
+            esse possimus.
+          </p>
+          <button class="book-button-card">
+            Book a Section
+            <span><img src="images/Arrow 1.png" alt="Arrow1" /></span>
+          </button>
+        </div>
+        <div class="card">
+          <h2>Content Marketing</h2>
+          <p>
+            reprehenderit libero dolorum officia rem ut ullam? Lorem ipsum dolor
+            sit amet, consectetur adipisicing elit. Voluptates, nulla iusto
+            aliquam in incidunt amet aspernatur deleniti explicabo. Reiciendis
+            modi voluptate iste tenetur magni ratione mollitia placeat. Dolore,
+            esse possimus.
+          </p>
+          <button class="book-button-card">
+            Book a Section
+            <span><img src="images/Arrow 1.png" alt="Arrow1" /></span>
+          </button>
+        </div>
+        <div class="card">
+          <h2>24/7 Eye on Competitors</h2>
+          <p>
+            reprehenderit libero dolorum officia rem ut ullam? Lorem ipsum dolor
+            sit amet, consectetur adipisicing elit. Voluptates, nulla iusto
+            aliquam in incidunt amet aspernatur deleniti explicabo. Reiciendis
+            modi voluptate iste tenetur magni ratione mollitia placeat. Dolore,
+            esse possimus.
+          </p>
+          <button class="book-button-card">
+            Book a Section
+            <span><img src="images/Arrow 1.png" alt="Arrow1" /></span>
+          </button>
+        </div>
+      </div>
     </div>
 
     <!-- Hero Section -->
     <section class="hero">
       <div class="content">
-        <div class="tagline">AI Marketing Agency Focused on E-commerce</div>
+        <p class="tagline">AI Marketing Agency Focused on E-commerce</p>
         <h1>FINAL SEASON OF MARKETING</h1>
         <div class="info">
           <p>
-            Lorem ips sit, amet consectetur adipisicing elit.Neque animi sequi,
-            exercitationem
+            Lorem ipsum sit, amet consectetur adipisicing elit. Neque animi
+            sequi, exercitationem
           </p>
           <p>doloribus consectetur consequatur, adipisci abasperio sed!</p>
           <p>
-            Lorem ips sit, amet consectetur adipisicing elit.Neque animi sequi.
+            Lorem ipsum sit, amet consectetur adipisicing elit. Neque animi
+            sequi.
           </p>
         </div>
-
-        <button class="btn">SEND PROPOSAL</button>
-      </div>
-
-      <!-- Image Section -->
-      <div class="dotted-pattern">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <button class="btn" aria-label="Send proposal">
+          SEND PROPOSAL <span>→</span>
+        </button>
       </div>
 
       <div class="image-container">
-        <img src="images/woman.png" alt="Marketing Image" />
+        <div class="hero-dots-pattern" aria-hidden="true">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <img
+          src="images/woman.png"
+          alt="Marketing professional"
+          width="500"
+          height="600"
+          loading="lazy"
+        />
       </div>
     </section>
 
-    <section class="team-section">
-        <video autoplay loop muted playsinline class="background-video">
-          <source src="images/background-vid-amTop.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div class="team-content">
-          <div class="dots-pattern"></div>
-          <h2>Our Team</h2>
-          <p id="team-info">
-            <!-- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste
-            asperiores rem, repellat perferendis sunt voluptatibus dolor officia
-            cum dignissimos molestiae placeat sequi quos quo, porro facere vero,
-            quod similique id! Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Corporis molestias quidem temporibus sint, illum consequuntur
-            natus repudiandae fugit quod quibusdam eum harum doloremque,
-            architecto commodi libero debitis nostrum labore delectus! -->
-          </p>
-          <button class="book-button">Book a Section <span>→</span></button>
+    <!-- Team Section -->
+    <section class="team-section" aria-label="Our team">
+      <video
+        autoplay
+        loop
+        muted
+        playsinline
+        class="background-video"
+        aria-hidden="true"
+      >
+        <source src="images/background-vid-amTop.mp4" type="video/mp4" />
+      </video>
+      <div class="team-content">
+        <div class="dots-pattern" aria-hidden="true"></div>
+        <h2>Our Team</h2>
+        <p id="team-info"></p>
+        <button class="book-button" aria-label="Book a section">
+          Book a Section <span aria-hidden="true">→</span>
+        </button>
+      </div>
+      <div class="team-image">
+        <img
+          id="team-img"
+          src="images/Amarnath.png"
+          alt="Team member portrait"
+          width="400"
+          height="500"
+          loading="lazy"
+        />
+        <div class="background-design" aria-hidden="true">
+          <span></span>
         </div>
-        <div class="team-image">
-          <img id="team-img" src="images/Amarnath.png" alt="Team Member" />
-          <div class="background-design"></div>
-        </div>
-      </section>
+      </div>
+    </section>
 
     <section class="analysis-section">
       <!-- Background Video -->
