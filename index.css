@@ -1119,10 +1119,173 @@ h1 {
 }
 
 /* Mobile Navigation */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 320px) {
   .hamburger {
     display: flex;
   }
+
+  body {
+    width: min-content;
+  }
+
+  .content {
+    max-width: max-content;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .image-container > img {
+    width: fit-content;
+  }
+
+  .dots-pattern {
+    width:150px;
+    height: 80px;
+  }
+
+  .team-section {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .team-content {
+    max-width: max-content;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    padding: 5%;
+  }
+
+  .analysis-section {
+    max-width: max-content;
+    display: flex;
+    align-items: start;
+  }
+
+  .content-container > img {
+    height: 400px;
+  }
+
+
+
+
+  .content-2 {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .content-2-header > h2 {
+    width: 300px;
+  }
+
+
+  .written_content {
+    max-height: fit-content;
+    max-width:fit-content;
+  }
+
+  .book-button {
+    width: max-content;
+
+  }
+
+  .social-media-section {
+    max-width: max-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .dotted-pattern2 {
+    display: none;
+    margin-top: 0%;
+  }
+
+
+  .ads-list {
+    max-width: max-content;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding-top: 0%;
+  }
+
+  .left-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:max-content;
+    height:50px;
+    flex: 0%;
+  }
+
+  .ad-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0%;
+  }
+
+  .ad-card > h3 {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    width:max-content;
+    font-size: smaller;
+    padding-bottom: 5px;
+    margin: 0%;
+    padding: 0%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .ad-card.active {
+    height: 60px;
+    width:90px;
+  }
+
+  .ad-card.active > h3 {
+    width: 100px;
+  }
+
+  .ad-card > p ,.arrow {
+    display: none;
+  }
+
+
+  .right-panel {
+    max-width: max-content;
+    padding-right: 0;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .right-panel > h2 {
+    width: 250px;
+  }
+  
+
+  .tagline {
+    align-self: center;
+  }
+
+  .marketing-section {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .text {
+    padding: 0%;
+  }
+
+  /* .grid-container {
+    display: grid;
+    grid-column:;
+  } */
 
   .nav-buttons {
     position: fixed;
