@@ -619,3 +619,104 @@ p {
   z-index: -1;
   opacity: 1; /* Makes it subtle */
 }
+ 
+@media screen and (max-width: 320px) {
+
+  html {
+    width: max-content;
+  }
+  body {
+    width:min-content;
+  }
+  .navbar {
+    justify-content: space-between;
+    width: min-content;
+    padding-top: 0%;
+  }
+
+  .logo > img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .nav-buttons {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 320px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.95);
+    margin: 0;
+    padding: 80px 20px;
+    transition: right 0.3s ease-in-out;
+    z-index: 999;
+  }
+
+  .nav-buttons.active {
+    right: 0;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .nav-item {
+    font-size: var(--fs-lg);
+  }
+
+  
+
+  .Hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+  }
+
+  .web-background > img {
+    width: 100%;
+  }
+  .right-content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .ai-analytics {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+  }
+
+  .analysis-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:320px;
+  }
+
+  .content-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width:100%;
+  }
+  .social-media-section {
+    display: flex;
+    flex-direction: column;
+    width:320px;
+  }
+
+  .team-section {
+    display: flex;
+    flex-direction: column;
+    width:320px;
+  }
+
+}
